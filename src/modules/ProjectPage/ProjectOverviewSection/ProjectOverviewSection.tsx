@@ -156,7 +156,7 @@ const ProjectOverviewSection = ({
           </h4>
           <button
             onClick={showModal}
-            className="text-background mt-12 tracking-wider border-2 border-background p-1 py-2 grow-on-hover font-semibold"
+            className="text-white mt-12 tracking-wider border-2 border-gray-300 p-1 py-2 grow-on-hover font-semibold"
           >
             {btnText}
           </button>
