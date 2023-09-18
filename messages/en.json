@@ -1,0 +1,167 @@
+{
+  "Index": {
+    "home": {
+      "hero": {
+        "title1": "Let's build",
+        "title2": "together",
+        "subTitle": "Building Technologies Innovating Through Collaboration To Address Global Challenges Delivering Quality Service Beyond Expectations.",
+        "button": "Explore PROJECTS"
+      }
+    },
+    "title": "Home",
+    "description": "This is the home page."
+  },
+  "home": {
+    "helpSection": {
+      "heading": "How can Novawork help your business?",
+      "title1": "Existing Projects",
+      "title2": "New Concepts",
+      "title3": "Augment Your Team",
+      "title4": "Novawork for Enterprise",
+      "title5": "Advanced Technology",
+      "title6": "Let's work together",
+      "description1": "Software platforms that need new features, updating, or maintenance. Work with our developers to meet your product goals.",
+      "description2": "Software projects that haven't been built. Work with our design and architecture team to bring your concept to life.",
+      "description3": "Short or long term engagements. Partner with us for extra hands on deck for your development team.",
+      "description4": "Get to know how Novawork can accommodate the unique needs of your large organization.",
+      "description5": "Use our expertise in cutting edge technologies such as machine learning, computer vision, and artificial intelligence.",
+      "description6": "Start with a conversation to find out how our team can help you meet your software goals.",
+      "button1": "Learn More",
+      "button2": "Get in Touch"
+    },
+    "projectSection": {
+      "title": "Projects developed by Novawork"
+    },
+    "feedbackSection": {
+      "title": "What our clients says about us?"
+    },
+    "developerSection": {
+      "title": "By Developers For Developers",
+      "description": "Our team was born with the philosophy that great software starts by giving developers the environment and trust they need to do their job well. We're proud to have continually grown our team where developers come first and are passionate about what they do.",
+      "btnText": "Get to Know Us"
+    },
+    "bottomSection": {
+      "title": "Building Innovative Products for Great Companies",
+      "description": "Enterprise, startup, and everywhere in between. All conversations start the same question: how can we help you?",
+      "btnText": "Get in Touch"
+    }
+  },
+  "contactForm": {
+    "title": "Let's work together",
+    "description": "Thanks for your interest in Novawork! We look forward to learning about what you are working on. Drop us a line and someone from our team will get in touch with you.",
+    "form": {
+      "title1": "Your Contact Information",
+      "title2": "What kind of project are you working on?",
+      "title3": "How can we help?",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "Tell us about your project",
+      "btnText": "Submit",
+      "closeBtnText": "CLOSE"
+    }
+  },
+  "existingProject": {
+    "heroSection": {
+      "title": "Existing Projects",
+      "description": "Our team is ready to meet you wherever you are in the software development life cycle. Whether you need to add features, refresh design, or improve performance, we have you covered. \n\nHave a conversation with our architects to address your needs and get a project started."
+    },
+    "processSection": {
+      "title": "Our Process",
+      "subTitle": "Software platforms that need new features, updating, or maintenance. Work with our developers to meet your product goals.",
+      "step1": {
+        "title": "1. Discover",
+        "description": "Work with our product strategy team of designers and architects to get to the heart of your company's goals."
+      },
+      "step2": {
+        "title": "2. Define",
+        "description": "Create a plan that defines success for your business, prioritizes feature delivery, and ensures quality throughout."
+      },
+      "step3": {
+        "title": "3. Execute",
+        "description": "Let the building begin! Our agile team of developers will work in two week sprints to meet your project goals, iterate on your feedback, and stay in close communication through project completion."
+      }
+    },
+
+    "reviewSection": {
+      "text": "I've always dreamed about running a company that has no full-time IT employees, and with my apps developed by Novawork, we are able to achieve just that"
+    },
+    "callToAction": {
+      "title": "Have an existing project that needs help?",
+      "btnText": "Contact Us"
+    }
+  },
+  "newConcept": {
+    "heroSection": {
+      "title": "New Concepts",
+      "description": "Turn an idea into a working product. Bring your concept to our team of experts and let us help you choose a technology strategy that connects your budget and timeline to your vision."
+    },
+    "callToAction": {
+      "title": "Have an existing project that needs help?",
+      "btnText": "Contact Us"
+    }
+  },
+  "augmentTeam": {
+    "heroSection": {
+      "title": "Part Time or Short-Term Talent Services",
+      "description": "Get your project over the finish line. Borrow top talent from our team next time you are pushing a tight deadline or have an unexpected shortage of resources. Our diverse team of full time employees is available for part time or short term contracts. Enjoy the flexibility of a part time resource, with the loyalty of a full time employee."
+    },
+    "callToAction": {
+      "title": "Want to learn more about our available talent?",
+      "btnText": "Get in Touch"
+    }
+  },
+  "enterprise": {
+    "heroSection": {
+      "title": "Enterprises",
+      "description": "Novawork has deep expertise in developing enterprise applications for use in highly-regulated industries where security and performance are paramount. Leverage our subject matter knowledge in healthcare, finance, manufacturing, and education to build (or update) enterprise-grade applications that deliver maximum impact."
+    },
+    "callToAction": {
+      "title": "Need enterprise-class development expertise?",
+      "btnText": "Get in Touch"
+    }
+  },
+  "advancedTech": {
+    "heroSection": {
+      "title": "Advanced Technology",
+      "description": "Create the future with cutting edge technology. Our team has proven experience in machine learning development, computer vision, IoT, and advanced hardware integrations. We love the challenge of breaking new ground and exploring what is possible to help your company innovate."
+    },
+    "callToAction": {
+      "title": "Have cutting-edge technology?",
+      "btnText": "Get in Touch"
+    }
+  },
+  "service": {
+    "heroSection": {
+      "title": "Development",
+      "description": "Software development is our core. Leverage our talent to complete your next project, support your team, or architect a solution for your business.\n\nLooking for a specific tech stack? Take a look at the list of technologies we use to deliver production-quality applications at FortyAU. We consider ourselves 'language agnostic' and believe in using the right tool for the job.",
+      "btnText": "Get in Touch"
+    },
+    "midSection": {
+      "title": "DevOps and Cloud Migrations",
+      "description": "Automate and streamline your deployments. Script out your infrastructure and step in to cloud hosting solutions.\n\nAsk us about hosting, assessments, migration services, and general consulting for all your DevOps and infrastructure needs."
+    },
+    "callToAction": {
+      "title": "Have an existing project that needs extra development help?",
+      "btnText": "Get in Touch"
+    }
+  },
+
+  "about": {
+    "heading": "About Novawork",
+    "description": "At Novawork, we see ourselves as more than just a technology company – we are your partners in bringing your business vision to life. We specialize in software development, digital marketing, automation offering a holistic service to meet all your business needs.\n\nOur team is dedicated to understanding your unique objectives and working closely with you to create customized solutions. Our team members are experts in their respective fields, ready to provide you with the most effective and innovative strategies.\n\nIn the realm of software development, we offer end-to-end solutions, from the initial coding to the final design. We are well-versed in using cutting-edge technologies and programming languages, but it's not just about technical skills. We focus on creating websites that are both visually appealing and user-friendly, enhancing your audience's online experience.\n\nOur digital marketing services range from SEO to email marketing and everything in between. We understand the power of a well-designed digital marketing strategy in driving traffic, increasing conversions, and ultimately, growing your business. We don't just offer generic strategies – we work with you to create a marketing plan that aligns with your brand and business objectives.\n\nFor businesses looking to streamline their processes, our automation services, which involve crafting efficient scripts and bots, can significantly enhance productivity.\n\nAt Novawork, our commitment extends beyond delivering high-quality services – we strive to ensure your satisfaction at every step. We look forward to partnering with you to bring your business to new heights.",
+    "title": "Location",
+    "address": "Jurastrasse-7, 5507 Mellingen, Switzerland"
+  },
+
+  "footer": {
+    "col4": {
+      "title": "Have a Question?",
+      "btnText": "Contact Us"
+    }
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "Switch to {locale, select, de {German} en {English} other {Unknown}}"
+  },
+  "PageLayout": {
+    "pageTitle": "next-intl"
+  }
+}

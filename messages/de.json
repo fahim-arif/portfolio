@@ -1,0 +1,166 @@
+{
+  "Index": {
+    "home": {
+      "hero": {
+        "title1": "Bauen wir",
+        "title2": "zusammen",
+        "subTitle": "Innovation durch Zusammenarbeit, um globalen Herausforderungen zu begegnen und erstklassigen Service jenseits der Erwartungen zu liefern.",
+        "button": "PROJEKTE"
+      }
+    },
+    "title": "Startseite",
+    "description": "Das ist die Startseite"
+  },
+  "home": {
+    "helpSection": {
+      "heading": "Wie kann Novawork Ihrem Unternehmen helfen?",
+      "title1": "Bestehende Projekte",
+      "title2": "Neue Konzepte",
+      "title3": "Erweitern Sie Ihr Team",
+      "title4": "Novawork für Unternehmen",
+      "title5": "Fortgeschrittene Technologien",
+      "title6": "Lass uns zusammen arbeiten",
+      "description1": "Softwareplattformen, die neue Funktionen, Aktualisierungen oder Wartung benötigen. Arbeiten Sie mit unseren Entwicklern zusammen, um Ihre Produktziele zu erreichen.",
+      "description2": "Softwareprojekte, die noch nicht erstellt wurden. Arbeiten Sie mit unserem Design- und Architekturteam zusammen, um Ihr Konzept zum Leben zu erwecken.",
+      "description3": "Kurz- oder langfristige Engagements. Arbeiten Sie mit uns zusammen, um Ihrem Entwicklungsteam zusätzliche Unterstützung zu bieten.",
+      "description4": "Erfahren Sie, wie Novawork den individuellen Anforderungen Ihres Grossunternehmens gerecht werden kann.",
+      "description5": "Nutzen Sie unsere Expertise in Spitzentechnologien wie maschinellem Lernen, Computer Vision und künstlicher Intelligenz.",
+      "description6": "Beginnen Sie mit einem Gespräch, um herauszufinden, wie unser Team Ihnen helfen kann, Ihre Ziele zu erreichen.",
+      "button1": "Erfahren Sie mehr",
+      "button2": "Kontaktiere uns"
+    },
+    "projectSection": {
+      "title": "Von Novawork entwickelte Projekte"
+    },
+    "feedbackSection": {
+      "title": "Was unsere Kunden über uns sagen?"
+    },
+    "developerSection": {
+      "title": "Von Entwicklern für Entwickler",
+      "description": "Unser Team wurde mit der Philosophie gegründet, dass großartige Software beginnt, indem man Entwicklern die Umgebung und das Vertrauen gibt, die sie benötigen, um ihre Arbeit gut zu machen. Wir sind stolz darauf, unser Team kontinuierlich erweitert zu haben, bei dem Entwickler an erster Stelle stehen und leidenschaftlich bei ihrer Arbeit sind.",
+      "btnText": "Lernen Sie uns kennen"
+    },
+    "bottomSection": {
+      "title": "Innovative Produkte für großartige Unternehmen entwickeln",
+      "description": "Vom Großunternehmen bis zum Start-up und allem dazwischen. Alle Gespräche beginnen mit der gleichen Frage: Wie können wir Ihnen helfen?",
+      "btnText": "Kontakt aufnehmen"
+    }
+  },
+  "contactForm": {
+    "title": "Lass uns zusammenarbeiten",
+    "description": "Vielen Dank für Ihr Interesse an Novawork! Wir freuen uns darauf, mehr über Ihr Projekt zu erfahren. Schreiben Sie uns und jemand aus unserem Team wird sich bei Ihnen melden.",
+    "form": {
+      "title1": "Ihre Kontaktdaten",
+      "title2": "An welchem Projekt arbeiten Sie?",
+      "title3": "Wie können wir helfen?",
+      "messageLabel": "Ihre Nachricht",
+      "messagePlaceholder": "Erzählen Sie uns von Ihrem Projekt",
+      "btnText": "Absenden",
+      "closeBtnText": "SCHLIESSEN"
+    }
+  },
+  "existingProject": {
+    "heroSection": {
+      "title": "Bestehende Projekte",
+      "description": "Unser Team ist bereit, Sie zu unterstützen, wo immer Sie sich im Softwareentwicklungszyklus befinden. Ob Sie Funktionen hinzufügen, das Design auffrischen oder die Leistung verbessern müssen, wir stehen bereit. \n\nFühren Sie ein Gespräch mit unseren Architekten, um Ihre Bedürfnisse zu klären und ein Projekt zu starten."
+    },
+    "processSection": {
+      "title": "Unser Prozess",
+      "subTitle": "Softwareplattformen, die neue Funktionen benötigen, aktualisiert oder gewartet werden müssen. Arbeiten Sie mit unseren Entwicklern, um Ihre Produktziele zu erreichen.",
+      "step1": {
+        "title": "1. Entdecken",
+        "description": "Arbeiten Sie mit unserem Produktstrategieteam aus Designern und Architekten zusammen, um die Ziele Ihres Unternehmens genau zu verstehen."
+      },
+      "step2": {
+        "title": "2. Definieren",
+        "description": "Erstellen Sie einen Plan, der den Erfolg für Ihr Unternehmen definiert, die Lieferung von Funktionen priorisiert und während des gesamten Prozesses für Qualität sorgt."
+      },
+      "step3": {
+        "title": "3. Umsetzen",
+        "description": "Lasst uns bauen! Unser agiles Team von Entwicklern wird in zweiwöchigen Sprints arbeiten, um Ihre Projektziele zu erreichen, Ihr Feedback umzusetzen und während der gesamten Projektlaufzeit in engem Kontakt zu bleiben."
+      }
+    },
+    "reviewSection": {
+      "text": "Ich habe schon immer davon geträumt, ein Unternehmen zu führen, das keine Vollzeit-IT-Mitarbeiter hat, und mit meinen von Novawork entwickelten Apps können wir genau das erreichen."
+    },
+    "callToAction": {
+      "title": "Haben Sie ein bestehendes Projekt, das Hilfe benötigt?",
+      "btnText": "Kontaktieren Sie uns"
+    }
+  },
+  "newConcept": {
+    "heroSection": {
+      "title": "Neue Konzepte",
+      "description": "Verwandeln Sie eine Idee in ein funktionierendes Produkt. Bringen Sie Ihr Konzept zu unserem Expertenteam und lassen Sie uns Ihnen helfen, eine Technologiestrategie auszuwählen, die Ihr Budget und Ihren Zeitplan mit Ihrer Vision verbindet."
+    },
+    "callToAction": {
+      "title": "Haben Sie ein bestehendes Projekt, das Hilfe benötigt?",
+      "btnText": "Kontaktieren Sie uns"
+    }
+  },
+  "augmentTeam": {
+    "heroSection": {
+      "title": "Teilzeit- oder kurzfristige Talentdienste",
+      "description": "Bringen Sie Ihr Projekt zum Abschluss. Leihen Sie sich Top-Talente aus unserem Team aus, wenn Sie eine enge Deadline haben oder unerwartet an Ressourcen fehlt. Unser vielfältiges Team von Vollzeitmitarbeitern steht für Teilzeit- oder Kurzzeitverträge zur Verfügung. Genießen Sie die Flexibilität einer Teilzeitressource mit der Loyalität eines Vollzeitmitarbeiters."
+    },
+    "callToAction": {
+      "title": "Möchten Sie mehr über unsere verfügbaren Talente erfahren?",
+      "btnText": "Kontakt aufnehmen"
+    }
+  },
+  "enterprise": {
+    "heroSection": {
+      "title": "Unternehmen",
+      "description": "Novawork verfügt über umfassende Erfahrung in der Entwicklung von Unternehmensanwendungen für den Einsatz in stark regulierten Branchen, in denen Sicherheit und Leistung von größter Bedeutung sind. Nutzen Sie unser Fachwissen in den Bereichen Gesundheitswesen, Finanzen, Fertigung und Bildung, um Unternehmensanwendungen zu erstellen (oder zu aktualisieren), die maximale Wirkung erzielen."
+    },
+    "callToAction": {
+      "title": "Benötigen Sie Expertise in der Entwicklung auf Unternehmensebene?",
+      "btnText": "Kontakt aufnehmen"
+    }
+  },
+  "advancedTech": {
+    "heroSection": {
+      "title": "Fortgeschrittene Technologie",
+      "description": "Schaffen Sie die Zukunft mit Spitzentechnologie. Unser Team verfügt über nachgewiesene Erfahrung in der Entwicklung von maschinellem Lernen, Computer Vision, IoT und fortschrittlichen Hardware-Integrationen. Wir lieben die Herausforderung, Neuland zu betreten und zu erforschen, was möglich ist, um Ihrem Unternehmen bei der Innovation zu helfen."
+    },
+    "callToAction": {
+      "title": "Verfügen Sie über Spitzentechnologie?",
+      "btnText": "Kontakt aufnehmen"
+    }
+  },
+  "service": {
+    "heroSection": {
+      "title": "Entwicklung",
+      "description": "Softwareentwicklung ist unser Kerngeschäft. Nutzen Sie unser Talent, um Ihr nächstes Projekt abzuschließen, Ihr Team zu unterstützen oder eine Lösung für Ihr Unternehmen zu entwickeln. \n\nSuchen Sie nach einem bestimmten Technologie-Stack? Schauen Sie sich die Liste der Technologien an, die wir verwenden, um produktionsreife Anwendungen bei FortyAU zu liefern. Wir betrachten uns als 'sprachagnostisch' und glauben daran, das richtige Werkzeug für den Job zu verwenden.",
+      "btnText": "Kontakt aufnehmen"
+    },
+    "midSection": {
+      "title": "DevOps und Cloud-Migrationen",
+      "description": "Automatisieren und optimieren Sie Ihre Bereitstellungen. Skripten Sie Ihre Infrastruktur und steigen Sie in Cloud-Hosting-Lösungen ein. \n\nFragen Sie uns nach Hosting, Bewertungen, Migrationsservices und allgemeiner Beratung für all Ihre DevOps- und Infrastrukturbedürfnisse."
+    },
+    "callToAction": {
+      "title": "Haben Sie ein bestehendes Projekt, das zusätzliche Entwicklungsunterstützung benötigt?",
+      "btnText": "Kontakt aufnehmen"
+    }
+  },
+  "about": {
+    "heading": "Über Novawork",
+    "description": "Bei Novawork sehen wir uns nicht nur als Technologieunternehmen – wir sind Ihre Partner, um Ihre Geschäftsvision zu verwirklichen. Wir sind spezialisiert auf Softwareentwicklung, digitales Marketing, Automatisierung und bieten einen ganzheitlichen Service, um all Ihre Geschäftsanforderungen zu erfüllen. \n\nUnser Team ist darauf spezialisiert, Ihre einzigartigen Ziele zu verstehen und eng mit Ihnen zusammenzuarbeiten, um maßgeschneiderte Lösungen zu erstellen. Unsere Teammitglieder sind Experten auf ihrem Gebiet und bieten Ihnen die effektivsten und innovativsten Strategien. \n\nIm Bereich der Softwareentwicklung bieten wir End-to-End-Lösungen, von der anfänglichen Codierung bis zum endgültigen Design. Wir sind versiert im Umgang mit Spitzentechnologien und Programmiersprachen, aber es geht nicht nur um technische Fähigkeiten. Wir konzentrieren uns darauf, Websites zu erstellen, die sowohl visuell ansprechend als auch benutzerfreundlich sind und das Online-Erlebnis Ihres Publikums verbessern. \n\nUnsere digitalen Marketingdienstleistungen reichen von SEO bis E-Mail-Marketing und allem dazwischen. Wir verstehen die Kraft einer gut gestalteten digitalen Marketingstrategie, um den Traffic zu steigern, die Konversionen zu erhöhen und letztlich Ihr Geschäft zu vergrößern. Wir bieten keine generischen Strategien an – wir arbeiten mit Ihnen zusammen, um einen Marketingplan zu erstellen, der mit Ihrer Marke und Ihren Geschäftszielen übereinstimmt. \n\nFür Unternehmen, die ihre Prozesse optimieren möchten, können unsere Automatisierungsdienste, die effiziente Skripte und Bots beinhalten, die Produktivität erheblich steigern. \n\nBei Novawork geht unser Engagement über die Erbringung hochwertiger Dienstleistungen hinaus – wir bemühen uns, Ihre Zufriedenheit in jedem Schritt zu gewährleisten. Wir freuen uns darauf, mit Ihnen zusammenzuarbeiten, um Ihr Geschäft auf ein neues Niveau zu heben.",
+    "location": {
+      "title": "Standort",
+      "address": "Jurastrasse-7, 5507 Mellingen, Schweiz"
+    }
+  },
+  "footer": {
+    "col4": {
+      "title": "Noch Fragen?",
+      "btnText": "Kontakt aufnehmen"
+    }
+  },
+  "LocaleSwitcher": {
+    "switchLocale": "Zu {locale, select, de {Deutsch} en {Englisch} other {Unbekannt}} wechseln"
+  },
+  "PageLayout": {
+    "pageTitle": "next-intl"
+  }
+}
