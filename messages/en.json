@@ -4,7 +4,7 @@
       "hero": {
         "title1": "Let's build",
         "title2": "together",
-        "subTitle": "Building Technologies Innovating Through Collaboration To Address Global Challenges Delivering Quality Service Beyond Expectations.",
+        "subTitle": "Tech Visionaries Joining Forces to Conquer Global Challenges. Where Quality Service Meets Extraordinary Expectations.",
         "button": "Explore PROJECTS"
       }
     },
@@ -42,7 +42,7 @@
     },
     "bottomSection": {
       "title": "Building Innovative Products for Great Companies",
-      "description": "Enterprise, startup, and everywhere in between. All conversations start the same question: how can we help you?",
+      "description": "Enterprise, startup, and everywhere in between. All conversations start the same question: How can we help you?",
       "btnText": "Get in Touch"
     }
   },
@@ -112,7 +112,7 @@
   "enterprise": {
     "heroSection": {
       "title": "Enterprises",
-      "description": "Novawork has deep expertise in developing enterprise applications for use in highly-regulated industries where security and performance are paramount. Leverage our subject matter knowledge in healthcare, finance, manufacturing, and education to build (or update) enterprise-grade applications that deliver maximum impact."
+      "description": "Novawork specializes in developing secure and high-performance enterprise applications for industries such as healthcare, finance, manufacturing, and education. Utilize our expertise to create impactful, enterprise-grade applications."
     },
     "callToAction": {
       "title": "Need enterprise-class development expertise?",
@@ -149,7 +149,7 @@
     "heading": "About Novawork",
     "description": "At Novawork, we see ourselves as more than just a technology company – we are your partners in bringing your business vision to life. We specialize in software development, digital marketing, automation offering a holistic service to meet all your business needs.\n\nOur team is dedicated to understanding your unique objectives and working closely with you to create customized solutions. Our team members are experts in their respective fields, ready to provide you with the most effective and innovative strategies.\n\nIn the realm of software development, we offer end-to-end solutions, from the initial coding to the final design. We are well-versed in using cutting-edge technologies and programming languages, but it's not just about technical skills. We focus on creating websites that are both visually appealing and user-friendly, enhancing your audience's online experience.\n\nOur digital marketing services range from SEO to email marketing and everything in between. We understand the power of a well-designed digital marketing strategy in driving traffic, increasing conversions, and ultimately, growing your business. We don't just offer generic strategies – we work with you to create a marketing plan that aligns with your brand and business objectives.\n\nFor businesses looking to streamline their processes, our automation services, which involve crafting efficient scripts and bots, can significantly enhance productivity.\n\nAt Novawork, our commitment extends beyond delivering high-quality services – we strive to ensure your satisfaction at every step. We look forward to partnering with you to bring your business to new heights.",
     "title": "Location",
-    "address": "Jurastrasse-7, 5507 Mellingen, Switzerland"
+    "address": "Las Vegas, Nevada"
   },
 
   "footer": {

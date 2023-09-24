@@ -40,7 +40,7 @@ const faqs = [
   {
     question: "What do I need to know before I can start building an app?",
     answer:
-      "Before we can understand what users should click on, we need to define your business objectives. Our first question to you will be - what value does this product provide your users?. In order to take an idea from a napkin to a clickable tool, we need a crystal clear vision of how your users will complete an interaction with your solution. Not sure how to get from steps A to B? Consult with our product design team to narrow down your user workflows before development even begins.",
+      "Before we can understand what users should click on, we need to define your business objectives. Our first question to you will be - what value does this product provide your users? In order to take an idea from a napkin to a clickable tool, we need a crystal clear vision of how your users will complete an interaction with your solution. Not sure how to get from steps A to B? Consult with our product design team to narrow down your user workflows before development even begins.",
   },
   {
     question:
@@ -52,7 +52,7 @@ const faqs = [
     question:
       "I am a technical product decision-maker and I know exactly what I need. Will you follow the requirements I send you?",
     answer:
-      "Yes. We will work with you to build a scope and are happy to take a project off of your plate. If you are seeking more hands-on collaboration, perhaps you should look at our part-time engineers offering to add a Novawork team member to your team for the duration of your projec",
+      "Yes. We will work with you to build a scope and are happy to take a project off of your plate. If you are seeking more hands-on collaboration, perhaps you should look at our part-time engineers offering to add a Novawork team member to your team for the duration of your project.",
   },
 ];
 

@@ -30,7 +30,7 @@ function ServicesPage() {
   return (
     <>
       <HtmlHead
-        title="Software Development Services - Novawork San Francisco, California"
+        title="Software Development Services - Novawork Las Vegas, Nevadaa"
         content="Software development is our core. Take a look at the list of technologies we use to deliver production-quality applications at Novawork."
       />
       <Suspense fallback={<SkeletonCard />}>

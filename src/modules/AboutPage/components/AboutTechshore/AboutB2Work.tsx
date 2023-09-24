@@ -10,14 +10,19 @@ interface IProps {
 const AboutB2Work = ({ title, description }: IProps) => {
   return (
     <div>
-      <Image
-        src="/images/wanderung_mellingen_fislisbach_tuefels_chaeller_baden.jpg"
-        alt="incubator"
-        width={1000}
-        height={1000}
-        className="h-auto w-full md:h-96 object-cover  object-center"
-      />
-
+      <div
+        style={{
+          height: "35rem",
+        }}
+      >
+        <Image
+          src="/images/about-us1.jpg"
+          alt="incubator"
+          width={1000}
+          height={1000}
+          className="h-full w-full  object-cover  object-center"
+        />
+      </div>
       <div className="flex justify-between divide-x-2 max-w-7xl mx-4 md:mx-auto py-4 md:p-20">
         <div className="px-4 lg:px-16">
           <h2 className="text-heading3-bold md:text-heading2-bold mt-10">
@@ -55,7 +60,7 @@ const AboutB2Work = ({ title, description }: IProps) => {
               </g>
             </svg>
 
-            <p className="text-body-semibold ml-2">San Francisco, California</p>
+            <p className="text-body-semibold ml-2">Las Vegas, Nevada</p>
           </div>
 
           <div className="flex mt-8">

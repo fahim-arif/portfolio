@@ -38,18 +38,14 @@ const client = {
 const faqs = [
   {
     question: "How large an enterprise have you worked with?",
-    answer: "We have worked with companies as large as the Fortune 500.",
+    answer:
+      "We have experience collaborating with companies of varying sizes, from established industry leaders to innovative startups.",
   },
   {
     question:
       "What is the difference between working with an enterprise and just a large company?",
     answer:
       "In an enterprise, how you complete your work is as important as what you are working on. Large enterprises have established processes, guidelines and requirements that must be understood and followed in order to drive ongoing success as a consultant. We have deep expertise in delivering ongoing value with large enterprises in these types of environments.",
-  },
-  {
-    question: "Can resources be on-site or at our office?",
-    answer:
-      "If you are located in greater Mellingen areas, we have local developers that are able to attend meetings and work alongside your team as-needed. If you are located outside these areas, let's have a conversation about your needs and how we can best serve you.",
   },
 ];
 
@@ -89,7 +85,7 @@ function EnterprisePage() {
         description={t("heroSection.description")}
         image={heroImage}
       />
-      <ReviewSection client={client} image={reviewImage} />
+      <ReviewSection shouldRemoveQuotes client={client} image={reviewImage} />
       <FAQ faqs={isGerman ? germanFAQS : faqs} isGerman={isGerman} />
       <CallToAction
         title={t("callToAction.title")}

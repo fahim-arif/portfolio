@@ -5,15 +5,16 @@ import React from "react";
 interface IProps {
   image: ImageType;
   client: IClient;
+  shouldRemoveQuotes?: boolean;
 }
 
-function ReviewSection({ image, client }: IProps) {
+function ReviewSection({ image, client, shouldRemoveQuotes = false }: IProps) {
   return (
     <div className="bg-gradient-primary-secondary">
       <div className="max-w-7xl mx-auto px-8 lg:px-20 flex flex-col md:flex-row-reverse items-center">
         <div className="md:py-8 lg:py-20 max-w-sm">
           <h2 className="text-heading3-bold text-white py-4 mt-4">
-            &apos;&apos;{client.review}&apos;&apos;
+            {shouldRemoveQuotes ? client.review : `"${client.review}"`}
           </h2>
           <p className="text-gray-200">{client.name}</p>
           <p className="text-gray-200">{client.designation}</p>

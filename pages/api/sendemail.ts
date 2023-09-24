@@ -30,7 +30,7 @@ export default async function handler(
       secure: true,
       auth: {
         user: "info@novawork.io",
-        pass: "Va4BHtxgTKv$J@Y",
+        pass: "qt7YgVj4zFxW",
       },
     });
 

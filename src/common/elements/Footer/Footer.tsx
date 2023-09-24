@@ -26,10 +26,10 @@ export default function Footer() {
           <ul className="w-full flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 flex-1">
             <li className="mb-6">
               <span className="text-white mr-4  text-lg lg:text-heading3-bold font-semibold md:mr-6">
-                San Francisco, California
+                Las Vegas, NV
               </span>
             </li>
-            <li className=" text-white">San Francisco, California</li>
+            <li className=" text-white"> Las Vegas, Nevada, 89183</li>
           </ul>
           <ul className="w-full flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 flex-1">
             <li className="mb-6">
@@ -120,8 +120,8 @@ export default function Footer() {
               </Link>
             </li>
             <li className="my-4">
-              <Link className="text-white" href="tel:+41 78 732 09 94">
-                Phone: +41 78 732 09 94
+              <Link className="text-white" href="tel:+610-656-3531">
+                Phone: +610-656-3531
               </Link>
             </li>
           </ul>

@@ -44,12 +44,12 @@ const faqs = [
   {
     question: "Do you offer contract-to-hire?",
     answer:
-      "Novawork does not offer a contract-to-hire model for our staffing engagements. That being said, over 90% of our staff are full time employees of Novawork. With our team, you can enjoy the stability and consistency of a full-time employee with the flexibility of part-time resources.",
+      "Novawork does not offer a contract-to-hire model for our staffing engagements. With our team, you can enjoy the stability and consistency of a full-time employee with the flexibility of part-time resources.",
   },
   {
     question: "Can resources be on-site or at our office?",
     answer:
-      "If you are located in greater Mellingen areas, we have local developers that are able to attend meetings and work alongside your team as-needed. If you are located outside these areas, let's have a conversation about your needs and how we can best serve you.",
+      "Currently, we do not offer on-site services, as we are dedicated to providing top-notch remote solutions that ensure efficiency and quality regardless of location. However, we understand the value of face-to-face collaboration and are actively exploring the possibility of offering on-site services in the future. In the meantime, our team is committed to understanding your needs and finding innovative ways to work closely with you, utilizing the latest communication and collaboration tools to make the experience seamless and productive. Let’s have a conversation about your unique needs and how we can best serve you, regardless of geographical boundaries.",
   },
 ];
 

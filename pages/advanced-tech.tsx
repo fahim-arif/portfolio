@@ -37,9 +37,9 @@ const client = {
 
 const faqs = [
   {
-    question: "What kinds of technology can you work on?",
+    question: "What AI/Machine Learning services does your company offer?",
     answer:
-      "We can write software for virtually any technology. Whether it is augmented reality, machine learning or an automated parking meter system, we can handle it all.",
+      "Our company offers a wide range of AI/ML services, including custom model development, natural language processing, predictive analytics, image and video analysis, and deep learning solutions, tailored to meet the unique needs of your business.",
   },
   {
     question:
@@ -92,7 +92,7 @@ function AdvancedTechPage() {
         description={t("heroSection.description")}
         image={heroImage}
       />
-      <ReviewSection client={client} image={reviewImage} />
+      <ReviewSection shouldRemoveQuotes client={client} image={reviewImage} />
       <FAQ faqs={isGerman ? germanFAQS : faqs} isGerman={isGerman} />
       <CallToAction
         title={t("callToAction.title")}
