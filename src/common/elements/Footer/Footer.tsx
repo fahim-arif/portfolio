@@ -115,8 +115,8 @@ export default function Footer() {
               </button>
             </li>
             <li className="my-4">
-              <Link className="text-white" href="mailto: info@novawork.ch">
-                info@novawork.ch
+              <Link className="text-white" href="mailto: info@novawork.io">
+                info@novawork.io
               </Link>
             </li>
             <li className="my-4">
