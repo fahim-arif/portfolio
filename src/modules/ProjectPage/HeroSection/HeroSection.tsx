@@ -1,7 +1,9 @@
 import { Project } from "@/common/types";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState } from "react";
+import gsap from "gsap";
 
 interface IProps {
   project: Project;
@@ -11,14 +13,44 @@ interface IProps {
 const HeroSection = ({ project, btnText }: IProps) => {
   const [isImageLoaded, setImageLoaded] = useState(false);
 
+  const { id } = useRouter().query;
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      ".zoom-in-item-project-hero",
+      { scale: 0.6, opacity: 0 },
+      {
+        duration: 1,
+        scale: 1,
+        opacity: 1,
+        stagger: 0.5,
+        ease: "power2.out",
+      }
+    );
+
+    tl.fromTo(
+      ".fade-in-image",
+      { x: "100%", opacity: 0 },
+      {
+        duration: 2,
+        x: "0%",
+        opacity: 1,
+        ease: "power2.inOut",
+      },
+      "-=1.25"
+    );
+  }, [id]);
+
   return (
     <div className="h-auto relative max-w-7xl mx-auto px-8 md:px-10 my-20">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="my-0 md:my-40 max-w-md">
-          <h1 className="text-heading3-bold md:text-heading2-bold font-bold ">
+          <h1 className="text-heading3-bold md:text-heading2-bold font-bold zoom-in-item-project-hero">
             {project?.title}
           </h1>
-          <p className="text-xl mt-8 text-gray-500 md:font-semibold">
+          <p className="text-xl mt-8 text-gray-500 md:font-semibold zoom-in-item-project-hero">
             {project?.subtitle}
           </p>
           {project?.webUrl && (
@@ -27,7 +59,7 @@ const HeroSection = ({ project, btnText }: IProps) => {
               target="_blank"
               href={project.webUrl}
             >
-              <button className="bg-background text-white my-8  h-12 text-base-bold  tracking-wider md:h-14 font-semibold grow-on-hover px-8">
+              <button className="bg-background text-white my-8  h-12 text-base-bold  tracking-wider md:h-14 font-semibold grow-on-hover px-8 zoom-in-item-project-hero">
                 {btnText}
               </button>
             </Link>
@@ -40,6 +72,7 @@ const HeroSection = ({ project, btnText }: IProps) => {
             </div>
           )}
           <Image
+            className="fade-in-image"
             src={project?.images[0]}
             height={700}
             width={700}

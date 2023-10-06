@@ -124,7 +124,7 @@ const ProjectSection = React.forwardRef((props: IProps, ref: any) => {
               scale={1.1}
               className="hover:z-10 relative"
             >
-              <div className="project-animate-item shadow-xl border-2 rounded-lg">
+              <div className="project-animate-item shadow-xl rounded-lg">
                 <Thumbnail project={project} />
               </div>
             </Tilt>
