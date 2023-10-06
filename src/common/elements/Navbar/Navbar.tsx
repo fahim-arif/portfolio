@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ContactUsModal } from "../Modals/ContactUsModal";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
+import gsap from "gsap";
 
 interface IProps {
   scrollToServiceSection?: () => void;
@@ -29,11 +30,43 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
     setModalVisible(false);
   };
 
+  useEffect(() => {
+    const tl = gsap.timeline();
+    gsap.killTweensOf(".navbar-slide-animation");
+    tl.fromTo(
+      ".navbar-slide-animation",
+      {
+        x: "200%",
+        opacity: 0,
+      },
+      {
+        duration: 1,
+        x: "0%",
+        opacity: 1,
+        ease: "power2.out",
+      }
+    );
+    tl.fromTo(
+      ".navbar-slide-animation li",
+      {
+        x: "200%",
+        opacity: 0,
+      },
+      {
+        duration: 0.5,
+        x: "0%",
+        opacity: 1,
+        stagger: 0.2,
+        ease: "power2.out",
+      }
+    );
+  }, [mobileMenuOpen]);
+
   return (
     <nav className="dark:bg-gray-900 mx-auto w-full">
       {isModalVisible && <ContactUsModal onCloseModal={onCloseModal} />}
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 md:py-4 px-8 md:px-10">
-        <div className="flex items-center max-h-16 flex-1">
+        <div className="flex items-center max-h-16 flex-1 z-10">
           <Link href="/">
             <Image
               width={200}
@@ -43,7 +76,10 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
             />
           </Link>
         </div>
-        <button className={`p-2 block md:hidden`} onClick={toggleMobileMenu}>
+        <button
+          className={`p-2 block md:hidden z-10`}
+          onClick={toggleMobileMenu}
+        >
           <span className="sr-only">Open main menu</span>
 
           <svg
@@ -61,7 +97,7 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
               ? "block bg-white w-full h-full top-0 left-0"
               : "hidden top-12 left-0"
           } w-full md:block md:w-auto flex-1 fixed md:static  ${
-            mobileMenuOpen ? "z-50" : "z-0"
+            mobileMenuOpen ? "z-50 navbar-slide-animation" : "z-10"
           }`}
           id="navbar-default"
         >

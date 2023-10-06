@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ContactUsModal } from "@/common/elements/Modals/ContactUsModal";
-
+import gsap from "gsap";
+import Tilt from "react-parallax-tilt";
 interface IProps {
   title: string;
   description: string;
@@ -18,167 +19,216 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
   const onCloseModal = () => {
     setModalVisible(false);
   };
+  const sectionRef = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+          gsap.killTweensOf(".client-animate-heading, .client-animate-item");
+          const tl = gsap.timeline();
+
+          tl.fromTo(
+            ".client-animate-item",
+            { scale: 0.6, opacity: 0 },
+            {
+              duration: 1,
+              scale: 1,
+              opacity: 1,
+              ease: "power2.out",
+              stagger: 0.25,
+            }
+          );
+        }
+      },
+      {
+        rootMargin: "0px",
+        threshold: 0.15,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
   return (
-    <div className="px-4 md:px-12 max-w-7xl mx-auto max-h-fit py-8 my-20">
+    <div
+      ref={sectionRef}
+      className="px-4 md:px-12 max-w-7xl mx-auto max-h-fit py-8 my-20"
+    >
       {isModalVisible && <ContactUsModal onCloseModal={onCloseModal} />}
       <div className="flex h-full flex-col-reverse md:flex-row">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 min-h-max mt-8 md:mt-0">
-          <div className="bg-gray-50 flex flex-col justify-center items-center h-40">
-            <svg
-              viewBox="0 0 25 33"
-              focusable="false"
-              className="chakra-icon css-1l9125y"
-              style={{
-                height: "50px",
-              }}
-            >
-              <path
-                d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246c-1.14-.583-1.518-1.989-1.565-3.169a12.39 12.39 0 00-.238-1.916 16.672 16.672 0 00-1.518-4.475 11.936 11.936 0 00-3.667-4.363A11.273 11.273 0 0010.661.77 12.767 12.767 0 009.09.285 18.87 18.87 0 008.248.12c-.146 0-.802 0-.889-.119 0 0 3.037 3.7 2.44 7.426l.292.663A3.846 3.846 0 017 10.973c-.095.006-.19.006-.285 0a2.392 2.392 0 01-1.989-1.021c-.362.464-.754.905-1.173 1.32a12.16 12.16 0 1020.765 8.618 12 12 0 00-.941-4.64z"
-                fill="url(#navbar-logo_paint0_linear_1:4)"
-              ></path>
-              <path
-                d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246c-1.14-.583-1.518-1.989-1.565-3.169a12.39 12.39 0 00-.238-1.916 16.672 16.672 0 00-1.518-4.475 11.936 11.936 0 00-3.667-4.363A11.273 11.273 0 0010.661.77 12.767 12.767 0 009.09.285 18.87 18.87 0 008.248.12c-.146 0-.802 0-.889-.119 0 0 3.037 3.7 2.44 7.426l.292.663A3.846 3.846 0 017 10.973c-.095.006-.19.006-.285 0a2.392 2.392 0 01-1.989-1.021c-.362.464-.754.905-1.173 1.32a12.16 12.16 0 1020.765 8.618 12 12 0 00-.941-4.64z"
-                fill="url(#navbar-logo_paint1_radial_1:4)"
-                fillOpacity="0.3"
-              ></path>
-              <path
-                d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246c-1.14-.583-1.518-1.989-1.565-3.169a12.39 12.39 0 00-.238-1.916 16.672 16.672 0 00-1.518-4.475 11.936 11.936 0 00-3.667-4.363A11.273 11.273 0 0010.661.77 12.767 12.767 0 009.09.285 18.87 18.87 0 008.248.12c-.146 0-.802 0-.889-.119 0 0 3.037 3.7 2.44 7.426l.292.663A3.846 3.846 0 017 10.973c-.095.006-.19.006-.285 0a2.392 2.392 0 01-1.989-1.021c-.362.464-.754.905-1.173 1.32a12.16 12.16 0 1020.765 8.618 12 12 0 00-.941-4.64z"
-                fill="url(#navbar-logo_paint2_radial_1:4)"
-                fillOpacity="0.6"
-              ></path>
-              <path
-                fillOpacity="evenodd"
-                clipRule="evenodd"
-                d="M7.36 0s2.585 3.315 2.327 6.836a5.145 5.145 0 01-.484 2.386 2.924 2.924 0 01-1.704 1.585 2.46 2.46 0 01-1.558 0 2.48 2.48 0 01-1.128-.796l-.072-.066c-.367.467-.764.91-1.187 1.326A12.12 12.12 0 000 19.891c2.937 1.537 5.61.57 7.545-.777a11.59 11.59 0 004.601-7.067C13.923 4.044 7.36 0 7.36 0z"
-                fill="url(#navbar-logo_paint3_linear_1:4)"
-              ></path>
-              <g opacity="0.4">
+          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+            <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
+              <svg
+                viewBox="0 0 25 33"
+                focusable="false"
+                className="chakra-icon css-1l9125y"
+                style={{
+                  height: "50px",
+                }}
+              >
                 <path
-                  opacity="0.4"
-                  d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246 2.81 2.81 0 01-1.326-1.83c.058.473.09.95.093 1.426A12.086 12.086 0 012.102 26.68a12.147 12.147 0 0022.217-6.79 12 12 0 00-.941-4.64z"
-                  fill="url(#navbar-logo_paint4_linear_1:4)"
+                  d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246c-1.14-.583-1.518-1.989-1.565-3.169a12.39 12.39 0 00-.238-1.916 16.672 16.672 0 00-1.518-4.475 11.936 11.936 0 00-3.667-4.363A11.273 11.273 0 0010.661.77 12.767 12.767 0 009.09.285 18.87 18.87 0 008.248.12c-.146 0-.802 0-.889-.119 0 0 3.037 3.7 2.44 7.426l.292.663A3.846 3.846 0 017 10.973c-.095.006-.19.006-.285 0a2.392 2.392 0 01-1.989-1.021c-.362.464-.754.905-1.173 1.32a12.16 12.16 0 1020.765 8.618 12 12 0 00-.941-4.64z"
+                  fill="url(#navbar-logo_paint0_linear_1:4)"
                 ></path>
                 <path
-                  opacity="0.4"
-                  d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246 2.81 2.81 0 01-1.326-1.83c.058.473.09.95.093 1.426A12.086 12.086 0 012.102 26.68a12.147 12.147 0 0022.217-6.79 12 12 0 00-.941-4.64z"
-                  fill="url(#navbar-logo_paint5_radial_1:4)"
-                  fillOpacity="0.4"
+                  d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246c-1.14-.583-1.518-1.989-1.565-3.169a12.39 12.39 0 00-.238-1.916 16.672 16.672 0 00-1.518-4.475 11.936 11.936 0 00-3.667-4.363A11.273 11.273 0 0010.661.77 12.767 12.767 0 009.09.285 18.87 18.87 0 008.248.12c-.146 0-.802 0-.889-.119 0 0 3.037 3.7 2.44 7.426l.292.663A3.846 3.846 0 017 10.973c-.095.006-.19.006-.285 0a2.392 2.392 0 01-1.989-1.021c-.362.464-.754.905-1.173 1.32a12.16 12.16 0 1020.765 8.618 12 12 0 00-.941-4.64z"
+                  fill="url(#navbar-logo_paint1_radial_1:4)"
+                  fillOpacity="0.3"
                 ></path>
                 <path
-                  opacity="0.4"
-                  d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246 2.81 2.81 0 01-1.326-1.83c.058.473.09.95.093 1.426A12.086 12.086 0 012.102 26.68a12.147 12.147 0 0022.217-6.79 12 12 0 00-.941-4.64z"
-                  fill="url(#navbar-logo_paint6_radial_1:4)"
-                  fillOpacity="0.9"
+                  d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246c-1.14-.583-1.518-1.989-1.565-3.169a12.39 12.39 0 00-.238-1.916 16.672 16.672 0 00-1.518-4.475 11.936 11.936 0 00-3.667-4.363A11.273 11.273 0 0010.661.77 12.767 12.767 0 009.09.285 18.87 18.87 0 008.248.12c-.146 0-.802 0-.889-.119 0 0 3.037 3.7 2.44 7.426l.292.663A3.846 3.846 0 017 10.973c-.095.006-.19.006-.285 0a2.392 2.392 0 01-1.989-1.021c-.362.464-.754.905-1.173 1.32a12.16 12.16 0 1020.765 8.618 12 12 0 00-.941-4.64z"
+                  fill="url(#navbar-logo_paint2_radial_1:4)"
+                  fillOpacity="0.6"
                 ></path>
-              </g>
-              <defs>
-                <radialGradient
-                  id="navbar-logo_paint1_radial_1:4"
-                  cx="0"
-                  cy="0"
-                  r="1"
-                  gradientUnits="userSpaceOnUse"
-                  gradientTransform="matrix(19.89016 -1.65751 1.25884 15.10604 0 26.189)"
-                >
-                  <stop></stop>
-                  <stop offset="1" stopOpacity="0"></stop>
-                </radialGradient>
-                <radialGradient
-                  id="navbar-logo_paint2_radial_1:4"
-                  cx="0"
-                  cy="0"
-                  r="1"
-                  gradientUnits="userSpaceOnUse"
-                  gradientTransform="matrix(-11.27115 10.27648 -7.8047 -8.56013 20.553 11.603)"
-                >
-                  <stop stopColor="#FFC2A8" stopOpacity="0.97"></stop>
-                  <stop offset="1" stopColor="#FFC2A8" stopOpacity="0"></stop>
-                </radialGradient>
-                <radialGradient
-                  id="navbar-logo_paint5_radial_1:4"
-                  cx="0"
-                  cy="0"
-                  r="1"
-                  gradientUnits="userSpaceOnUse"
-                  gradientTransform="rotate(-18.8 97.1 -2.441) scale(16.4587 20.4888)"
-                >
-                  <stop></stop>
-                  <stop offset="1" stopOpacity="0"></stop>
-                </radialGradient>
-                <radialGradient
-                  id="navbar-logo_paint6_radial_1:4"
-                  cx="0"
-                  cy="0"
-                  r="1"
-                  gradientUnits="userSpaceOnUse"
-                  gradientTransform="matrix(-3.6466 10.27659 -12.79286 -4.53949 23.205 16.907)"
-                >
-                  <stop stopColor="#FFD9C8" stopOpacity="0.97"></stop>
-                  <stop offset="1" stopColor="#FFC2A8" stopOpacity="0"></stop>
-                </radialGradient>
-                <linearGradient
-                  id="navbar-logo_paint0_linear_1:4"
-                  x1="11.934"
-                  y1="2.321"
-                  x2="8.288"
-                  y2="25.526"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#FF8A00"></stop>
-                  <stop offset="1" stopColor="#FC2D00"></stop>
-                </linearGradient>
-                <linearGradient
-                  id="navbar-logo_paint3_linear_1:4"
-                  x1="6.226"
-                  y1="0"
-                  x2="6.226"
-                  y2="20.676"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#FD550A"></stop>
-                  <stop offset="1" stopColor="#CA2501"></stop>
-                </linearGradient>
-                <linearGradient
-                  id="navbar-logo_paint4_linear_1:4"
-                  x1="24.531"
-                  y1="13.923"
-                  x2="18.233"
-                  y2="27.183"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#fff"></stop>
-                  <stop offset="1" stopColor="#F30"></stop>
-                </linearGradient>
-              </defs>
-            </svg>
-            <p>twoMatches</p>
-          </div>
-          <div className="bg-gray-50 flex flex-col justify-center items-center h-40">
-            <Image
-              src="/images/clientLogo/hexaLogo.png"
-              height={150}
-              width={130}
-              alt="twomatches logo"
-            />
-          </div>
-          <div className="bg-gray-50 flex flex-col justify-center items-center h-40">
-            <Image
-              src="/images/clientLogo/ARROWX.png"
-              height={200}
-              width={200}
-              alt="twomatches logo"
-            />
-          </div>
-          <div className="bg-gray-50 flex flex-col justify-center items-center  h-40">
-            <Image
-              src="/images/clientLogo/shouttLogo.png"
-              height={100}
-              width={100}
-              alt="twomatches logo"
-            />
-          </div>
+                <path
+                  fillOpacity="evenodd"
+                  clipRule="evenodd"
+                  d="M7.36 0s2.585 3.315 2.327 6.836a5.145 5.145 0 01-.484 2.386 2.924 2.924 0 01-1.704 1.585 2.46 2.46 0 01-1.558 0 2.48 2.48 0 01-1.128-.796l-.072-.066c-.367.467-.764.91-1.187 1.326A12.12 12.12 0 000 19.891c2.937 1.537 5.61.57 7.545-.777a11.59 11.59 0 004.601-7.067C13.923 4.044 7.36 0 7.36 0z"
+                  fill="url(#navbar-logo_paint3_linear_1:4)"
+                ></path>
+                <g opacity="0.4">
+                  <path
+                    opacity="0.4"
+                    d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246 2.81 2.81 0 01-1.326-1.83c.058.473.09.95.093 1.426A12.086 12.086 0 012.102 26.68a12.147 12.147 0 0022.217-6.79 12 12 0 00-.941-4.64z"
+                    fill="url(#navbar-logo_paint4_linear_1:4)"
+                  ></path>
+                  <path
+                    opacity="0.4"
+                    d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246 2.81 2.81 0 01-1.326-1.83c.058.473.09.95.093 1.426A12.086 12.086 0 012.102 26.68a12.147 12.147 0 0022.217-6.79 12 12 0 00-.941-4.64z"
+                    fill="url(#navbar-logo_paint5_radial_1:4)"
+                    fillOpacity="0.4"
+                  ></path>
+                  <path
+                    opacity="0.4"
+                    d="M23.378 15.25a2.493 2.493 0 01-2.05 1.014 2.534 2.534 0 01-1.08-.246 2.81 2.81 0 01-1.326-1.83c.058.473.09.95.093 1.426A12.086 12.086 0 012.102 26.68a12.147 12.147 0 0022.217-6.79 12 12 0 00-.941-4.64z"
+                    fill="url(#navbar-logo_paint6_radial_1:4)"
+                    fillOpacity="0.9"
+                  ></path>
+                </g>
+                <defs>
+                  <radialGradient
+                    id="navbar-logo_paint1_radial_1:4"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="matrix(19.89016 -1.65751 1.25884 15.10604 0 26.189)"
+                  >
+                    <stop></stop>
+                    <stop offset="1" stopOpacity="0"></stop>
+                  </radialGradient>
+                  <radialGradient
+                    id="navbar-logo_paint2_radial_1:4"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="matrix(-11.27115 10.27648 -7.8047 -8.56013 20.553 11.603)"
+                  >
+                    <stop stopColor="#FFC2A8" stopOpacity="0.97"></stop>
+                    <stop offset="1" stopColor="#FFC2A8" stopOpacity="0"></stop>
+                  </radialGradient>
+                  <radialGradient
+                    id="navbar-logo_paint5_radial_1:4"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="rotate(-18.8 97.1 -2.441) scale(16.4587 20.4888)"
+                  >
+                    <stop></stop>
+                    <stop offset="1" stopOpacity="0"></stop>
+                  </radialGradient>
+                  <radialGradient
+                    id="navbar-logo_paint6_radial_1:4"
+                    cx="0"
+                    cy="0"
+                    r="1"
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="matrix(-3.6466 10.27659 -12.79286 -4.53949 23.205 16.907)"
+                  >
+                    <stop stopColor="#FFD9C8" stopOpacity="0.97"></stop>
+                    <stop offset="1" stopColor="#FFC2A8" stopOpacity="0"></stop>
+                  </radialGradient>
+                  <linearGradient
+                    id="navbar-logo_paint0_linear_1:4"
+                    x1="11.934"
+                    y1="2.321"
+                    x2="8.288"
+                    y2="25.526"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="#FF8A00"></stop>
+                    <stop offset="1" stopColor="#FC2D00"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="navbar-logo_paint3_linear_1:4"
+                    x1="6.226"
+                    y1="0"
+                    x2="6.226"
+                    y2="20.676"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="#FD550A"></stop>
+                    <stop offset="1" stopColor="#CA2501"></stop>
+                  </linearGradient>
+                  <linearGradient
+                    id="navbar-logo_paint4_linear_1:4"
+                    x1="24.531"
+                    y1="13.923"
+                    x2="18.233"
+                    y2="27.183"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="#fff"></stop>
+                    <stop offset="1" stopColor="#F30"></stop>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <p>twoMatches</p>
+            </div>
+          </Tilt>
+          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+            <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
+              <Image
+                src="/images/clientLogo/hexaLogo.png"
+                height={150}
+                width={130}
+                alt="twomatches logo"
+              />
+            </div>
+          </Tilt>
+          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+            <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
+              <Image
+                src="/images/clientLogo/ARROWX.png"
+                height={200}
+                width={200}
+                alt="twomatches logo"
+              />
+            </div>
+          </Tilt>
+          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+            <div className="bg-gray-50 flex flex-col justify-center items-center  h-40 client-animate-item shadow-xl rounded-lg">
+              <Image
+                src="/images/clientLogo/shouttLogo.png"
+                height={100}
+                width={100}
+                alt="twomatches logo"
+              />
+            </div>
+          </Tilt>
           {/* Second Row */}
-          <div className="bg-gray-50 flex flex-col justify-center items-center py-20 h-40">
+          <div className="bg-gray-50 flex flex-col justify-center items-center py-20 h-40 client-animate-item shadow-xl rounded-lg">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               style={{
@@ -237,39 +287,47 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
               />
             </svg>
           </div>
-          <div className="bg-gray-50 flex flex-col justify-center items-center h-40">
-            <Image
-              src="/images/clientLogo/fourthPartyLogo.png"
-              height={100}
-              width={100}
-              alt="FourthParty Logo"
-            />
-          </div>
-          <div className="bg-gray-50 flex flex-col justify-center items-center h-40">
-            <Image
-              src="/images/clientLogo/diligiteLogo.png"
-              height={100}
-              width={100}
-              alt="Diligite logo"
-            />
-          </div>
-          <div className="bg-gray-50 flex flex-col justify-center items-center h-40">
-            <Image
-              src="/images/clientLogo/logosmallblack.png"
-              height={100}
-              width={100}
-              alt="Diligite logo"
-            />
-          </div>
+          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+            <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
+              <Image
+                src="/images/clientLogo/fourthPartyLogo.png"
+                height={100}
+                width={100}
+                alt="FourthParty Logo"
+              />
+            </div>
+          </Tilt>
+          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+            <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
+              <Image
+                src="/images/clientLogo/diligiteLogo.png"
+                height={100}
+                width={100}
+                alt="Diligite logo"
+              />
+            </div>
+          </Tilt>
+          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+            <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
+              <Image
+                src="/images/clientLogo/logosmallblack.png"
+                height={100}
+                width={100}
+                alt="Diligite logo"
+              />
+            </div>
+          </Tilt>
         </div>
         <div className="flex-auto">
-          <h3 className="text-4xl font-bold p-8 py-0">{title}</h3>
-          <p className="p-8 text-gray-500 font-semibold text-lg pb-0">
+          <h3 className="text-4xl font-bold p-8 py-0 client-animate-item">
+            {title}
+          </h3>
+          <p className="p-8 text-gray-500 font-semibold text-lg pb-0 client-animate-item">
             {description}
           </p>
           <button
             onClick={showModal}
-            className="ml-8 p-4 mt-8 text-gray-700 text-base-bold tracking-wider border-2 border-primary p-1 grow-on-hover font-semibold"
+            className="ml-8 p-4 mt-8 text-gray-700 text-base-bold tracking-wider border-2 border-primary p-1 grow-on-hover font-semibold client-animate-item"
           >
             {btnText}
           </button>
