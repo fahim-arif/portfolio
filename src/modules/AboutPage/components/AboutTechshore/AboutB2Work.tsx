@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import gsap from "gsap";
 
 interface IProps {
   title: string;
@@ -8,27 +9,68 @@ interface IProps {
 }
 
 const AboutB2Work = ({ title, description }: IProps) => {
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          observer.unobserve(entry.target);
+          gsap.killTweensOf(".image-slide-in, .zoom-in-element");
+
+          const tl = gsap.timeline();
+
+          tl.from(".image-slide-in", {
+            x: "-100%",
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out",
+          });
+
+          tl.from(
+            ".zoom-in-element",
+            {
+              scale: 0.5,
+              opacity: 0,
+              duration: 1,
+              ease: "power2.out",
+              stagger: 0.5,
+            },
+            "-=0.5"
+          );
+        }
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, []);
   return (
-    <div>
-      <div
-        style={{
-          height: "35rem",
-        }}
-      >
-        <Image
-          src="/images/about-us1.jpg"
-          alt="incubator"
-          width={1000}
-          height={1000}
-          className="h-full w-full  object-cover  object-center"
-        />
-      </div>
+    <div ref={aboutRef}>
+      <Image
+        src="/images/about-us1.jpg"
+        alt="incubator"
+        width={1000}
+        height={1000}
+        className="h-auto w-full md:h-96 object-cover  object-center image-slide-in"
+      />
+
       <div className="flex justify-between divide-x-2 max-w-7xl mx-4 md:mx-auto py-4 md:p-20">
         <div className="px-4 lg:px-16">
-          <h2 className="text-heading3-bold md:text-heading2-bold mt-10">
+          <h2 className="text-heading3-bold md:text-heading2-bold mt-10 zoom-in-element">
             {title}
           </h2>
-          <p className="text-base-medium text-justify lg:max-w-2xl w-full mx-auto mt-5 pt-3 mb-12 text-gray-600">
+          <p className="text-base-medium text-justify lg:max-w-2xl w-full mx-auto mt-5 pt-3 mb-12 text-gray-600 zoom-in-element">
             {description.split("\n").map((line, index) => (
               <span key={index}>
                 {line}
@@ -38,7 +80,7 @@ const AboutB2Work = ({ title, description }: IProps) => {
           </p>
         </div>
         <div className="hidden lg:block mt-10 pl-12">
-          <div className="flex items-center mt-16 justify-between">
+          <div className="flex items-center mt-16 justify-between zoom-in-element">
             <svg
               width="32"
               height="32"
@@ -63,7 +105,7 @@ const AboutB2Work = ({ title, description }: IProps) => {
             <p className="text-body-semibold ml-2">Las Vegas, Nevada</p>
           </div>
 
-          <div className="flex mt-8">
+          <div className="flex mt-8 zoom-in-element">
             <Image
               src="/images/email-1573-svgrepo-com.svg"
               alt="Email"
