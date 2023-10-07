@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ContactUsModal } from "../Modals/ContactUsModal";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
@@ -61,6 +61,52 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
       }
     );
   }, [mobileMenuOpen]);
+
+  const projects = [
+    {
+      id: 1,
+      name: "Twomatches B2B Business",
+    },
+    {
+      id: 2,
+      name: "FreeCast",
+    },
+    {
+      id: 3,
+      name: "Shoutt Freelancer Platform",
+    },
+    {
+      id: 4,
+      name: "GetDone Maintenance Management",
+    },
+    {
+      id: 5,
+      name: "OwnProp - The Future of Fractional Investing",
+    },
+    {
+      id: 6,
+      name: "Real Estate Data Scraper",
+    },
+  ];
+
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownCloseTimeoutId, setDropdownCloseTimeoutId] =
+    useState<NodeJS.Timeout | null>(null);
+
+  const openDropdown = () => {
+    if (dropdownCloseTimeoutId) {
+      clearTimeout(dropdownCloseTimeoutId);
+      setDropdownCloseTimeoutId(null);
+    }
+    setDropdownOpen(true);
+  };
+
+  const closeDropdownWithDelay = () => {
+    const timeoutId = setTimeout(() => {
+      setDropdownOpen(false);
+    }, 300); // 300 milliseconds delay
+    setDropdownCloseTimeoutId(timeoutId);
+  };
 
   return (
     <nav className="dark:bg-gray-900 mx-auto w-full">
@@ -163,15 +209,29 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
                 Contact
               </Link>
             </li>
-            <li>
-              {/* <select
-                onChange={handleLocaleChange}
-                className="block bg-background p-10 py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 md:hover:text-primary text-heading3-bold md:text-base-semibold"
-                value={locale}
-              >
-                <option value="en">English</option>
-                <option value="de">German</option>
-              </select> */}
+            <li
+              className="relative group cursor-pointer"
+              onMouseEnter={openDropdown}
+              onMouseLeave={closeDropdownWithDelay}
+            >
+              <span className="block py-2 pl-3 pr-4 text-black rounded md:bg-transparent md:p-0 md:hover:text-primary text-heading3-bold md:text-base-semibold">
+                Projects
+              </span>
+              {isDropdownOpen && (
+                <ul
+                  className="absolute left-1/2 -translate-x-[5rem] shadow-2xl mt-2 rounded-md bg-gray-100"
+                  onMouseEnter={openDropdown}
+                  onMouseLeave={closeDropdownWithDelay}
+                >
+                  {projects.map((project) => (
+                    <Link key={project.id} href={`/project/${project.id}`}>
+                      <li className="w-[21rem] px-2 py-2 hover:bg-gray-500 rounded-lg overflow-hidden">
+                        {project.name}
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+              )}
             </li>
           </ul>
         </div>
