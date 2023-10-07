@@ -58,6 +58,7 @@ const AboutB2Work = ({ title, description }: IProps) => {
   return (
     <div ref={aboutRef}>
       <Image
+        priority
         src="/images/about-us1.jpg"
         alt="incubator"
         width={1000}
