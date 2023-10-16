@@ -2,7 +2,13 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { ContactUsModal } from "../Modals/ContactUsModal";
 import { useRouter } from "next/router";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaTwitter,
+  FaLinkedin,
+  FaInstagram,
+  FaEnvelope,
+} from "react-icons/fa";
 
 export default function Footer() {
   const [isModalVisible, setModalVisible] = useState(false);
@@ -128,7 +134,8 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className=" text-white w-full flex justify-center">
+        <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 " />
+        <div className=" text-white w-full flex justify-center my-7">
           <div className="flex w-1/3 justify-between">
             <Link
               href="https://web.facebook.com/novaworkio"
@@ -158,10 +165,15 @@ export default function Footer() {
             >
               <FaInstagram size={24} />
             </Link>
+            <Link
+              href="mailto:info@novawork.io"
+              className="hover:text-gray-500"
+              target="_blank"
+            >
+              <FaEnvelope size={24} />
+            </Link>
           </div>
         </div>
-
-        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:mb-8" />
         <span className="block text-sm text-gray-300 sm:text-center">
           © 2023 <a>Novawork</a>. All Rights Reserved.
         </span>
