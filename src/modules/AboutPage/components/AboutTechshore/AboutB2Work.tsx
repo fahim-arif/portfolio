@@ -192,20 +192,21 @@ const AboutB2Work = ({ title, description }: IProps) => {
         ref={aboutRef}
         className="flex flex-col justify-center items-center w-full pt-20 pb-10"
       >
-        <div className="flex flex-col lg:flex-row justify-center items-center ">
+        <div className="flex flex-col lg:flex-row justify-center items-center px-10">
           <h1 className="text-heading2-bold lg:mr-20  slide-in-left">
             {title}
           </h1>
-          <Image
-            priority
-            src="/images/about-us1.jpg"
-            alt="incubator"
-            width={600}
-            height={600}
-            className="rounded-3xl lg:mt-0 mt-10 slide-in-right"
-          />
+          <div className="w-full md:w-[450px] lg:w-[600px] h-[200px] md:h-[450px] lg:h-[600px]  slide-in-right relative lg:my-0 my-10">
+            <Image
+              priority
+              src="/images/about-us1.jpg"
+              alt="incubator"
+              fill
+              className="rounded-3xl  "
+            />
+          </div>
         </div>
-        <p className="lg:w-[60rem] w-full px-10 lg:px-0 pt-14 text-[1.1rem] text-justify zoom-in-element-about">
+        <p className="lg:w-[60rem] w-full px-10 lg:px-0 text-[1.1rem] text-justify zoom-in-element-about">
           {description}
         </p>
       </section>
