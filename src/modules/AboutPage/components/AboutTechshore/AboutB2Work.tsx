@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
+import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 interface IProps {
   title: string;
@@ -16,16 +17,27 @@ const AboutB2Work = ({ title, description }: IProps) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           observer.unobserve(entry.target);
-          gsap.killTweensOf(".image-slide-in, .zoom-in-element");
+          gsap.killTweensOf(".slide-in-left,.slide-in-right, .zoom-in-element");
 
           const tl = gsap.timeline();
 
-          tl.from(".image-slide-in", {
-            x: "-100%",
+          tl.from(".slide-in-left", {
+            x: "-300%",
             opacity: 0,
             duration: 1,
             ease: "power2.out",
           });
+
+          tl.from(
+            ".slide-in-right",
+            {
+              x: "300%",
+              opacity: 0,
+              duration: 1,
+              ease: "power2.out",
+            },
+            "-=0.5"
+          );
 
           tl.from(
             ".zoom-in-element",
@@ -56,72 +68,164 @@ const AboutB2Work = ({ title, description }: IProps) => {
     };
   }, []);
   return (
-    <div ref={aboutRef}>
-      <Image
-        priority
-        src="/images/about-us1.jpg"
-        alt="incubator"
-        width={1000}
-        height={1000}
-        className="h-auto w-full md:h-96 object-cover  object-center image-slide-in"
-      />
+    <div
+      ref={aboutRef}
+      className="flex flex-col justify-center items-center bg-white px-60 "
+    >
+      <section className="flex justify-center items-center w-full py-20">
+        <h1 className="text-heading2-bold mr-20 slide-in-left">{title}</h1>
+        <Image
+          priority
+          src="/images/about-us1.jpg"
+          alt="incubator"
+          width={600}
+          height={600}
+          className="rounded-3xl slide-in-right"
+        />
+      </section>
+      <div className="px-64 text-[1.1rem]">
+        <section>{description}</section>
 
-      <div className="flex justify-between divide-x-2 max-w-7xl mx-4 md:mx-auto py-4 md:p-20">
-        <div className="px-4 lg:px-16">
-          <h2 className="text-heading3-bold md:text-heading2-bold mt-10 zoom-in-element">
-            {title}
-          </h2>
-          <p className="text-base-medium text-justify lg:max-w-2xl w-full mx-auto mt-5 pt-3 mb-12 text-gray-600 zoom-in-element">
-            {description.split("\n").map((line, index) => (
-              <span key={index}>
-                {line}
-                <br />
-              </span>
-            ))}
+        <section>
+          <h1 className="text-heading1-semibold mt-10 mb-5">Founder Story</h1>
+          <p>
+            More than two decades ago, Ben Chestnut and Dan Kurzius started a
+            web design agency called the Rocket Science Group. Their focus was
+            on big, corporate clients, but on the side, they created a
+            delightful email marketing service for small businesses. Mailchimp
+            was designed as an alternative to the oversized, expensive email
+            software of the early 2000s. Founded in Atlanta in 2001, it offered
+            small business owners access to many of the same digital marketing
+            advantages that their much larger competitors enjoyed, powering
+            their success and enabling them to grow. In the years that followed,
+            Mailchimp continued to deliver results for budding entrepreneurs.
+            But just as those original customers continued to grow, so did
+            Mailchimp, evolving its product offerings to serve companies and
+            marketing teams of all sizes and skill levels. In 2021, Mailchimp
+            was acquired by Intuit, a company with a long track record of
+            driving small business success and solving customer problems. Today,
+            we continue to empower the underdog and strive to be the business
+            partner we wish we had way back in the beginning.
           </p>
-        </div>
-        <div className="hidden lg:block mt-10 pl-12">
-          <div className="flex items-center mt-16 justify-between zoom-in-element">
-            <svg
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="#00FFFF"
-            >
-              <title>location</title>
-              <g id="Page-1" fill="#000000">
-                <g
-                  id="Icon-Set"
-                  transform="translate(-104.000000, -411.000000)"
-                >
-                  <path
-                    d="M116,426 C114.343,426 113,424.657 113,423 C113,421.343 114.343,420 116,420 C117.657,420 119,421.343 119,423 C119,424.657 117.657,426 116,426 L116,426 Z M116,418 C113.239,418 111,420.238 111,423 C111,425.762 113.239,428 116,428 C118.761,428 121,425.762 121,423 C121,420.238 118.761,418 116,418 L116,418 Z M116,440 C114.337,440.009 106,427.181 106,423 C106,417.478 110.477,413 116,413 C121.523,413 126,417.478 126,423 C126,427.125 117.637,440.009 116,440 L116,440 Z M116,411 C109.373,411 104,416.373 104,423 C104,428.018 114.005,443.011 116,443 C117.964,443.011 128,427.95 128,423 C128,416.373 122.627,411 116,411 L116,411 Z"
-                    id="location"
-                  ></path>
-                </g>
-              </g>
-            </svg>
-
-            <p className="text-body-semibold ml-2">Las Vegas, Nevada</p>
-          </div>
-
-          <div className="flex mt-8 zoom-in-element">
-            <Image
-              src="/images/email-1573-svgrepo-com.svg"
-              alt="Email"
-              width={24}
-              height={24}
-            ></Image>
-            <Link
-              className="ml-3 text-body-semibold"
-              href="mailto: info@novawork.io"
-            >
-              info@novawork.io
-            </Link>
-          </div>
-        </div>
+        </section>
+        <section>
+          <h1 className="text-heading1-semibold mt-10 mb-5">Culture</h1>
+          <p>
+            Intuit Mailchimp strives to create a culture that empowers a humble,
+            creative, and independent workforce. We are passionate about our
+            small business customers and believe that collaboration and
+            creativity are powerful tools to help them make their dreams a
+            reality.
+            <br />
+            <br />
+            We love how each new hire adds to our culture. And, we’re hiring.
+            <br />
+            <br />
+            We believe that what makes us different makes us stronger. Building
+            a more diverse, inclusive, and equitable organization is good for
+            our teams, our customers, and our community. We empower each other
+            to bring unique perspectives and experiences to work, and we
+            continually seek new ways to do so.
+          </p>
+        </section>
       </div>
+      <section className="w-4/5 h-[50rem]  flex flex-col items-center">
+        <h1 className="text-heading2-bold mt-10 mb-5 ">About Our Ceo</h1>
+        <div className="flex justify-around w-full py-10">
+          <div className="flex flex-col items-center w-2/5">
+            <Image
+              priority
+              src="/images/avatar.png"
+              alt="incubator"
+              width={300}
+              height={600}
+              className="rounded-3xl"
+            />
+            <h2 className="text-heading4-bold text-gray-700 underline">
+              ABC DEF
+            </h2>
+            <i>CEO, Co-Founder</i>
+            <div className=" text-gray-700 w-full flex justify-center my-7 ">
+              <div className="flex w-1/3 justify-between">
+                <Link
+                  href="https://web.facebook.com/novaworkio"
+                  className="mr-4 hover:text-gray-500"
+                  target="_blank"
+                >
+                  <FaFacebook size={24} />
+                </Link>
+                <Link
+                  href="https://twitter.com/Novawork1o"
+                  className="mr-4 hover:text-gray-500"
+                  target="_blank"
+                >
+                  <FaTwitter size={24} />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/company/novawork-io/"
+                  className="mr-4 hover:text-gray-500"
+                  target="_blank"
+                >
+                  <FaLinkedin size={24} />
+                </Link>
+              </div>
+            </div>
+            <p className="text-[1.1rem] text-justify">
+              Casey lets Rand think he runs most of the show at SparkToro. He
+              was formerly at Moz, Wistia, HubSpot working on Inbound.org, and
+              most recently at Ookla. When not working, he enjoys spending time
+              with his wife and two daughters hiking, camping, and doing
+              anything outdoors.
+            </p>
+          </div>
+          <div className="flex flex-col items-center w-2/5">
+            <Image
+              priority
+              src="/images/avatar.png"
+              alt="incubator"
+              width={300}
+              height={600}
+              className="rounded-3xl"
+            />
+            <h2 className="text-heading4-bold text-gray-700 underline">
+              ABC DEF
+            </h2>
+            <i>CEO, Co-Founder</i>
+            <div className=" text-gray-700 w-full flex justify-center my-7 ">
+              <div className="flex w-1/3 justify-between">
+                <Link
+                  href="https://web.facebook.com/novaworkio"
+                  className="mr-4 hover:text-gray-500"
+                  target="_blank"
+                >
+                  <FaFacebook size={24} />
+                </Link>
+                <Link
+                  href="https://twitter.com/Novawork1o"
+                  className="mr-4 hover:text-gray-500"
+                  target="_blank"
+                >
+                  <FaTwitter size={24} />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/company/novawork-io/"
+                  className="mr-4 hover:text-gray-500"
+                  target="_blank"
+                >
+                  <FaLinkedin size={24} />
+                </Link>
+              </div>
+            </div>
+            <p className="text-[1.1rem] text-justify">
+              Casey lets Rand think he runs most of the show at SparkToro. He
+              was formerly at Moz, Wistia, HubSpot working on Inbound.org, and
+              most recently at Ookla. When not working, he enjoys spending time
+              with his wife and two daughters hiking, camping, and doing
+              anything outdoors.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
