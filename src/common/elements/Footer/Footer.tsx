@@ -136,7 +136,7 @@ export default function Footer() {
 
         <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 " />
         <div className=" text-white w-full flex justify-center my-7">
-          <div className="flex w-1/3 justify-between">
+          <div className="flex w-full sm:w-2/3 md:w-1/3  justify-between">
             <Link
               href="https://web.facebook.com/novaworkio"
               className="mr-4 hover:text-gray-500"

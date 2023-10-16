@@ -187,27 +187,29 @@ const AboutB2Work = ({ title, description }: IProps) => {
   );
 
   return (
-    <div className="flex flex-col justify-center items-center bg-white px-60 ">
+    <div className="flex flex-col justify-center items-center bg-white">
       <section
         ref={aboutRef}
         className="flex flex-col justify-center items-center w-full pt-20 pb-10"
       >
-        <div className="flex justify-center items-center ">
-          <h1 className="text-heading2-bold mr-20 slide-in-left">{title}</h1>
+        <div className="flex flex-col lg:flex-row justify-center items-center ">
+          <h1 className="text-heading2-bold lg:mr-20  slide-in-left">
+            {title}
+          </h1>
           <Image
             priority
             src="/images/about-us1.jpg"
             alt="incubator"
             width={600}
             height={600}
-            className="rounded-3xl slide-in-right"
+            className="rounded-3xl lg:mt-0 mt-10 slide-in-right"
           />
         </div>
-        <p className="px-64 pt-14 text-[1.1rem] zoom-in-element-about">
+        <p className="lg:w-[60rem] w-full px-10 lg:px-0 pt-14 text-[1.1rem] text-justify zoom-in-element-about">
           {description}
         </p>
       </section>
-      <div className="px-64 text-[1.1rem]">
+      <div className="lg:w-[60rem] w-full px-10 lg:px-0 text-[1.1rem] text-justify ">
         <section ref={founderRef}>
           <h1 className="text-heading1-semibold mb-5 zoom-in-element-founder">
             Founder Story
@@ -255,15 +257,12 @@ const AboutB2Work = ({ title, description }: IProps) => {
           </p>
         </section>
       </div>
-      <section
-        ref={ceoRef}
-        className="w-4/5 h-[50rem]  flex flex-col items-center"
-      >
+      <section ref={ceoRef} className="w-4/5  flex flex-col items-center">
         <h1 className="text-heading2-bold mt-10 mb-5 zoom-in-element-ceo">
           About Our Ceo
         </h1>
-        <div className="flex justify-around w-full py-10">
-          <div className="flex flex-col items-center w-2/5">
+        <div className="flex  lg:flex-row flex-col justify-center  lg:justify-around w-full py-10">
+          <div className="flex flex-col items-center lg:w-2/5 w-full">
             <Image
               priority
               src="/images/avatar.png"
@@ -309,7 +308,7 @@ const AboutB2Work = ({ title, description }: IProps) => {
               anything outdoors.
             </p>
           </div>
-          <div className="flex flex-col items-center w-2/5">
+          <div className="flex flex-col items-center lg:w-2/5 w-full mt-10 lg:mt-0">
             <Image
               priority
               src="/images/avatar.png"
