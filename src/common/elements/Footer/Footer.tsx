@@ -52,9 +52,6 @@ export default function Footer() {
                 </span>
               </Link>
             </li>
-            {/* <li className="mt-4">
-              <span className="text-white mr-4 md:mr-6 text-sm ">Team</span>
-            </li> */}
             <li className="mt-4">
               <Link href="/?scroll=reviews">
                 <span className="text-white mr-4 md:mr-6 text-sm ">
@@ -86,26 +83,14 @@ export default function Footer() {
                 </span>
               </Link>
             </li>
-            {/* <li className="mt-4">
-              <span className="text-white mr-4 md:mr-6 text-sm ">
-                Our Story
-              </span>
-            </li> */}
             <li className="mt-4">
-              {/* <Link href=""> */}
               <span
                 onClick={showModal}
                 className="text-white mr-4 md:mr-6 text-sm cursor-pointer"
               >
                 Contact
               </span>
-              {/* </Link> */}
             </li>
-            {/* <li className="mt-4">
-              <span className="text-white mr-4 md:mr-6 text-sm ">
-                Meet our Team
-              </span>
-            </li> */}
           </ul>
           <ul className="w-full flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 flex-1">
             <li className="mb-6">

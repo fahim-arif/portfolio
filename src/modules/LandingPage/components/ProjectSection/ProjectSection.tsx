@@ -121,7 +121,7 @@ const ProjectSection = React.forwardRef((props: IProps, ref: any) => {
             <Tilt
               key={project.id}
               perspective={500}
-              scale={1.1}
+              scale={1.05}
               className="hover:z-10 relative"
             >
               <div className="project-animate-item shadow-xl rounded-lg">

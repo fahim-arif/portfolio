@@ -60,10 +60,7 @@ function HomePage() {
         content="Novawork is an agile team of developers passionate about delivering quality software beyond expectations. Let's build applications together."
       />
       <Suspense fallback={<SkeletonCard />}>
-        <Navbar
-          scrollToServiceSection={scrollToServiceSection}
-          scrollToAboutSection={scrollToAboutSection}
-        />
+        <Navbar />
         <HeroSection
           scrollToProjectSection={scrollToProjectSection}
           title="YOUR ULTIMATE DIGITAL PARTNER"

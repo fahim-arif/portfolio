@@ -118,7 +118,7 @@ const CallToAction = ({
               <Link href="/existing-project">
                 <Tilt
                   perspective={500}
-                  scale={1.1}
+                  scale={1.05}
                   className="p-8 bg-gray-50 cta-animate-item hover:z-10 relative h-full shadow-2xl"
                 >
                   <div className="flex flex-col h-full justify-between  grow-on-hover ">
@@ -141,7 +141,7 @@ const CallToAction = ({
               <Link href="/new-concept">
                 <Tilt
                   perspective={500}
-                  scale={1.1}
+                  scale={1.05}
                   className="p-8 bg-gray-50 cta-animate-item hover:z-10 relative h-full shadow-2xl"
                 >
                   <div className="flex flex-col h-full justify-between  grow-on-hover ">
@@ -164,7 +164,7 @@ const CallToAction = ({
               <Link href="/augment-team">
                 <Tilt
                   perspective={500}
-                  scale={1.1}
+                  scale={1.05}
                   className="bg-gray-50 p-8 cta-animate-item hover:z-10 relative h-full shadow-2xl"
                 >
                   <div className="flex flex-col h-full justify-between  grow-on-hover ">
@@ -187,7 +187,7 @@ const CallToAction = ({
               <Link href="/enterprise">
                 <Tilt
                   perspective={500}
-                  scale={1.1}
+                  scale={1.05}
                   className="bg-background p-8 cta-animate-item hover:z-10 relative h-full shadow-2xl"
                 >
                   <div className="flex flex-col h-full justify-between  grow-on-hover ">
@@ -210,7 +210,7 @@ const CallToAction = ({
               <Link href="/advanced-tech">
                 <Tilt
                   perspective={500}
-                  scale={1.1}
+                  scale={1.05}
                   className="p-8 bg-gradient-primary-secondary cta-animate-item hover:z-10 relative h-full shadow-2xl"
                 >
                   <div className="flex flex-col h-full justify-between  grow-on-hover">

@@ -77,7 +77,7 @@ const HelpSection = () => {
       </h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 grid-cols-1 mx-4">
         <Link href="/existing-project">
-          <Tilt perspective={500} scale={1.1} className="hover:z-10 relative">
+          <Tilt perspective={500} scale={1.05} className="hover:z-10 relative">
             <div className="flex flex-col h-full justify-between p-8 lg:h-72 bg-gray-50  help-animate-item shadow-2xl rounded-lg">
               <h4 className="text-heading4-bold lg:text-heading3-bold tracking-wider">
                 {t("helpSection.title1")}
@@ -92,7 +92,7 @@ const HelpSection = () => {
           </Tilt>
         </Link>
         <Link href="/new-concept">
-          <Tilt perspective={500} scale={1.1} className="hover:z-10 relative">
+          <Tilt perspective={500} scale={1.05} className="hover:z-10 relative">
             <div className="flex flex-col h-full justify-between p-8 lg:h-72 bg-gray-50 help-animate-item shadow-2xl rounded-lg">
               <h4 className="text-heading4-bold lg:text-heading3-bold tracking-wider">
                 {t("helpSection.title2")}
@@ -107,7 +107,7 @@ const HelpSection = () => {
           </Tilt>
         </Link>
         <Link href="/augment-team">
-          <Tilt perspective={500} scale={1.1} className="hover:z-10 relative">
+          <Tilt perspective={500} scale={1.05} className="hover:z-10 relative">
             <div className="flex flex-col h-full justify-between p-8 lg:h-72 bg-gray-50 help-animate-item shadow-2xl rounded-lg">
               <h4 className="text-heading4-bold lg:text-heading3-bold tracking-wider">
                 {t("helpSection.title3")}
@@ -122,7 +122,7 @@ const HelpSection = () => {
           </Tilt>
         </Link>
         <Link href="/enterprise">
-          <Tilt perspective={500} scale={1.1} className="hover:z-10 relative">
+          <Tilt perspective={500} scale={1.05} className="hover:z-10 relative">
             <div className="p-8 bg-background cursor-pointer grow-on-hover lg:h-72 help-animate-item shadow-2xl rounded-lg">
               <h4 className="text-heading4-bold lg:text-heading3-bold tracking-wider text-white">
                 {t("helpSection.title4")}
@@ -137,7 +137,7 @@ const HelpSection = () => {
           </Tilt>
         </Link>
         <Link href="/advanced-tech">
-          <Tilt perspective={500} scale={1.1} className="hover:z-10 relative">
+          <Tilt perspective={500} scale={1.05} className="hover:z-10 relative">
             <div className="p-8 bg-gradient-primary-secondary cursor-pointer lg:h-72 help-animate-item shadow-2xl rounded-lg">
               <h4 className="text-heading4-bold lg:text-heading3-bold tracking-wider text-white">
                 {t("helpSection.title5")}
@@ -151,7 +151,7 @@ const HelpSection = () => {
             </div>
           </Tilt>
         </Link>
-        <Tilt perspective={500} scale={1.1} className="hover:z-10 relative">
+        <Tilt perspective={500} scale={1.05} className="hover:z-10 relative">
           <div
             onClick={showModal}
             className="p-8 cursor-pointer lg:h-72 help-animate-item shadow-2xl rounded-lg bg-gray-50"

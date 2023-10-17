@@ -34,10 +34,7 @@ function ServicesPage() {
         content="Software development is our core. Take a look at the list of technologies we use to deliver production-quality applications at Novawork."
       />
       <Suspense fallback={<SkeletonCard />}>
-        <Navbar
-          scrollToServiceSection={scrollToServiceSection}
-          scrollToAboutSection={scrollToAboutSection}
-        />
+        <Navbar />
 
         <HeroSection
           title={t("heroSection.title")}

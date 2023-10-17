@@ -1,17 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ContactUsModal } from "../Modals/ContactUsModal";
 import { useRouter } from "next/router";
-import { useTranslations } from "next-intl";
 import gsap from "gsap";
 
-interface IProps {
-  scrollToServiceSection?: () => void;
-  scrollToAboutSection?: () => void;
-}
-
-export default function Navbar({ scrollToServiceSection }: IProps) {
+export default function Navbar() {
   const router = useRouter();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -167,6 +161,40 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
                 Home
               </Link>
             </li>
+            <li
+              className="relative group cursor-pointer"
+              onMouseEnter={openDropdown}
+              onMouseLeave={closeDropdownWithDelay}
+            >
+              <span className="block py-2 pl-3 pr-4 text-black rounded md:bg-transparent md:p-0 md:hover:text-primary text-heading3-bold md:text-base-semibold inline-flex items-center">
+                Projects
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  width="16px"
+                  height="16px"
+                  className="ml-2"
+                >
+                  <path d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                </svg>
+              </span>
+              {isDropdownOpen && (
+                <ul
+                  className="absolute p-3 left-1/2 -translate-x-[5rem] shadow-2xl mt-2 rounded-md bg-gray-50"
+                  onMouseEnter={openDropdown}
+                  onMouseLeave={closeDropdownWithDelay}
+                >
+                  {projects.map((project) => (
+                    <Link key={project.id} href={`/project/${project.id}`}>
+                      <li className="w-[21rem] px-2 py-2 rounded-lg overflow-hidden md:hover:text-primary">
+                        {project.name}
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+              )}
+            </li>
             <li>
               <Link
                 href="/services"
@@ -178,14 +206,6 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
                 Services
               </Link>
             </li>
-            {/* <li>
-              <Link
-                href="/careers"
-                className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 md:hover:text-primary"
-              >
-                Careers
-              </Link>
-            </li> */}
             <li>
               <Link
                 href="/about"
@@ -208,30 +228,6 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
               >
                 Contact
               </Link>
-            </li>
-            <li
-              className="relative group cursor-pointer"
-              onMouseEnter={openDropdown}
-              onMouseLeave={closeDropdownWithDelay}
-            >
-              <span className="block py-2 pl-3 pr-4 text-black rounded md:bg-transparent md:p-0 md:hover:text-primary text-heading3-bold md:text-base-semibold">
-                Projects
-              </span>
-              {isDropdownOpen && (
-                <ul
-                  className="absolute left-1/2 -translate-x-[5rem] shadow-2xl mt-2 rounded-md bg-gray-100"
-                  onMouseEnter={openDropdown}
-                  onMouseLeave={closeDropdownWithDelay}
-                >
-                  {projects.map((project) => (
-                    <Link key={project.id} href={`/project/${project.id}`}>
-                      <li className="w-[21rem] px-2 py-2 hover:bg-gray-500 rounded-lg overflow-hidden">
-                        {project.name}
-                      </li>
-                    </Link>
-                  ))}
-                </ul>
-              )}
             </li>
           </ul>
         </div>
