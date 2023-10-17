@@ -1,8 +1,9 @@
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import gsap from "gsap";
 
 const PROJECT_TYPES = [
   "Mobile App",
@@ -149,16 +150,27 @@ export const ContactUsModal = ({ onCloseModal }: IProps) => {
     });
   };
 
+  useEffect(() => {
+    gsap.killTweensOf(".zoom-animate-contact");
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      ".zoom-animate-contact",
+      { scale: 0.6, opacity: 0 },
+      {
+        duration: 1,
+        scale: 1,
+        opacity: 1,
+        ease: "power2.out",
+      }
+    );
+  }, []);
+
   return (
     <>
       {isLoading ? (
         <div className="pt-12 relative bg-white">
-          <div
-            style={{
-              zIndex: 999,
-            }}
-            className="fixed z-100 bg-background inset-0 flex flex-col items-center z-100 justify-center"
-          >
+          <div className="fixed bg-background inset-0 flex flex-col items-center z-[999] justify-center">
             <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
             <h2 className="text-heading3-bold md:text-heading2-bold font-bold text-white pt-10">
               Loading...
@@ -167,11 +179,8 @@ export const ContactUsModal = ({ onCloseModal }: IProps) => {
         </div>
       ) : (
         <div
-          className="fixed z-50 top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center pt-20 lg:pt-8"
+          className="fixed z-[100] top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center pt-20 lg:pt-8 zoom-animate-contact"
           onClick={onCloseModal} // Close modal when clicking outside
-          style={{
-            zIndex: 100,
-          }}
         >
           <div
             className="overflow-y-auto max-h-[calc(100vh-1rem)] max-w-7xl w-11/12 flex flex-col lg:flex-row lg:max-h-full bg-gray-950"

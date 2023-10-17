@@ -1,16 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ContactUsModal } from "../Modals/ContactUsModal";
 import { useRouter } from "next/router";
-import { useTranslations } from "next-intl";
+import gsap from "gsap";
 
-interface IProps {
-  scrollToServiceSection?: () => void;
-  scrollToAboutSection?: () => void;
-}
-
-export default function Navbar({ scrollToServiceSection }: IProps) {
+export default function Navbar() {
   const router = useRouter();
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,11 +24,89 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
     setModalVisible(false);
   };
 
+  useEffect(() => {
+    const tl = gsap.timeline();
+    gsap.killTweensOf(".navbar-slide-animation");
+    tl.fromTo(
+      ".navbar-slide-animation",
+      {
+        x: "200%",
+        opacity: 0,
+      },
+      {
+        duration: 1,
+        x: "0%",
+        opacity: 1,
+        ease: "power2.out",
+      }
+    );
+    tl.fromTo(
+      ".navbar-slide-animation li",
+      {
+        x: "200%",
+        opacity: 0,
+      },
+      {
+        duration: 0.5,
+        x: "0%",
+        opacity: 1,
+        stagger: 0.2,
+        ease: "power2.out",
+      }
+    );
+  }, [mobileMenuOpen]);
+
+  const projects = [
+    {
+      id: 1,
+      name: "Twomatches B2B Business",
+    },
+    {
+      id: 2,
+      name: "FreeCast",
+    },
+    {
+      id: 3,
+      name: "Shoutt Freelancer Platform",
+    },
+    {
+      id: 4,
+      name: "GetDone Maintenance Management",
+    },
+    {
+      id: 5,
+      name: "OwnProp - The Future of Fractional Investing",
+    },
+    {
+      id: 6,
+      name: "Real Estate Data Scraper",
+    },
+  ];
+
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownCloseTimeoutId, setDropdownCloseTimeoutId] =
+    useState<NodeJS.Timeout | null>(null);
+
+  const openDropdown = () => {
+    if (dropdownCloseTimeoutId) {
+      clearTimeout(dropdownCloseTimeoutId);
+      setDropdownCloseTimeoutId(null);
+    }
+    setDropdownOpen(true);
+  };
+
+  const closeDropdownWithDelay = () => {
+    const timeoutId = setTimeout(() => {
+      setDropdownOpen(false);
+    }, 300); // 300 milliseconds delay
+    setDropdownCloseTimeoutId(timeoutId);
+  };
+
   return (
     <nav className="dark:bg-gray-900 mx-auto w-full">
       {isModalVisible && <ContactUsModal onCloseModal={onCloseModal} />}
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-2 md:py-4 px-8 md:px-10">
-        <div className="flex items-center max-h-16 flex-1">
+        <div className="flex items-center max-h-16 flex-1 z-10">
           <Link href="/">
             <Image
               width={200}
@@ -43,7 +116,10 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
             />
           </Link>
         </div>
-        <button className={`p-2 block md:hidden`} onClick={toggleMobileMenu}>
+        <button
+          className={`p-2 block md:hidden z-10`}
+          onClick={toggleMobileMenu}
+        >
           <span className="sr-only">Open main menu</span>
 
           <svg
@@ -61,7 +137,7 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
               ? "block bg-white w-full h-full top-0 left-0"
               : "hidden top-12 left-0"
           } w-full md:block md:w-auto flex-1 fixed md:static  ${
-            mobileMenuOpen ? "z-50" : "z-0"
+            mobileMenuOpen ? "z-50 navbar-slide-animation" : "z-10"
           }`}
           id="navbar-default"
         >
@@ -85,6 +161,40 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
                 Home
               </Link>
             </li>
+            <li
+              className="relative group cursor-pointer"
+              onMouseEnter={openDropdown}
+              onMouseLeave={closeDropdownWithDelay}
+            >
+              <span className="block py-2 pl-3 pr-4 text-black rounded md:bg-transparent md:p-0 md:hover:text-primary text-heading3-bold md:text-base-semibold inline-flex items-center">
+                Projects
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  width="16px"
+                  height="16px"
+                  className="ml-2"
+                >
+                  <path d="M5.293 9.293a1 1 0 011.414 0L10 12.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+                </svg>
+              </span>
+              {isDropdownOpen && (
+                <ul
+                  className="absolute p-3 left-1/2 -translate-x-[5rem] shadow-2xl mt-2 rounded-md bg-gray-50"
+                  onMouseEnter={openDropdown}
+                  onMouseLeave={closeDropdownWithDelay}
+                >
+                  {projects.map((project) => (
+                    <Link key={project.id} href={`/project/${project.id}`}>
+                      <li className="w-[21rem] px-2 py-2 rounded-lg overflow-hidden md:hover:text-primary">
+                        {project.name}
+                      </li>
+                    </Link>
+                  ))}
+                </ul>
+              )}
+            </li>
             <li>
               <Link
                 href="/services"
@@ -96,14 +206,6 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
                 Services
               </Link>
             </li>
-            {/* <li>
-              <Link
-                href="/careers"
-                className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 md:hover:text-primary"
-              >
-                Careers
-              </Link>
-            </li> */}
             <li>
               <Link
                 href="/about"
@@ -126,16 +228,6 @@ export default function Navbar({ scrollToServiceSection }: IProps) {
               >
                 Contact
               </Link>
-            </li>
-            <li>
-              {/* <select
-                onChange={handleLocaleChange}
-                className="block bg-background p-10 py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 md:hover:text-primary text-heading3-bold md:text-base-semibold"
-                value={locale}
-              >
-                <option value="en">English</option>
-                <option value="de">German</option>
-              </select> */}
             </li>
           </ul>
         </div>
