@@ -388,7 +388,7 @@ const AboutB2Work = ({ title, description }: IProps) => {
             <h2 className="text-heading4-semibold pt-4 text-gray-700 zoom-in-element-ceo">
               Fahim Arif
             </h2>
-            <i className="zoom-in-element-ceo">CEO, Co-Founder</i>
+            <i className="zoom-in-element-ceo">CTO, Co-Founder</i>
             <div className=" text-gray-700 w-full flex justify-evenly my-7 ">
               <div className="flex w-1/3 justify-between">
                 <Link
