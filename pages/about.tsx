@@ -4,11 +4,15 @@ import Footer from "@/common/elements/Footer";
 import AboutNovawork from "@/modules/AboutPage/components/AboutTechshore";
 import { GetStaticPropsContext } from "next";
 import { useTranslations } from "next-intl";
+import Head from "next/head";
 
 function AboutPage() {
   const t = useTranslations("about");
   return (
     <>
+      <Head>
+        <title>About</title>
+      </Head>
       <Navbar />
       <AboutNovawork title={t("heading")} description={t("description")} />
       <Footer />
