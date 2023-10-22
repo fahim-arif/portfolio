@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ContactUsModal } from "@/common/elements/Modals/ContactUsModal";
 import gsap from "gsap";
-import Tilt from "react-parallax-tilt";
+import CustomTilt from "../../../../common/elements/CustomTilt";
 interface IProps {
   title: string;
   description: string;
@@ -65,7 +65,7 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
       {isModalVisible && <ContactUsModal onCloseModal={onCloseModal} />}
       <div className="flex h-full flex-col-reverse md:flex-row">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 min-h-max mt-8 md:mt-0">
-          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+          <CustomTilt perspective={500} scale={1.2} className="hover:z-10 relative">
             <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
               <svg
                 viewBox="0 0 25 33"
@@ -196,8 +196,8 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
               </svg>
               <p>twoMatches</p>
             </div>
-          </Tilt>
-          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+          </CustomTilt>
+          <CustomTilt perspective={500} scale={1.2} className="hover:z-10 relative">
             <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
               <Image
                 src="/images/clientLogo/hexaLogo.png"
@@ -206,8 +206,8 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
                 alt="twomatches logo"
               />
             </div>
-          </Tilt>
-          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+          </CustomTilt>
+          <CustomTilt perspective={500} scale={1.2} className="hover:z-10 relative">
             <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
               <Image
                 src="/images/clientLogo/ARROWX.png"
@@ -216,8 +216,8 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
                 alt="twomatches logo"
               />
             </div>
-          </Tilt>
-          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+          </CustomTilt>
+          <CustomTilt perspective={500} scale={1.2} className="hover:z-10 relative">
             <div className="bg-gray-50 flex flex-col justify-center items-center  h-40 client-animate-item shadow-xl rounded-lg">
               <Image
                 src="/images/clientLogo/shouttLogo.png"
@@ -226,9 +226,9 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
                 alt="twomatches logo"
               />
             </div>
-          </Tilt>
+          </CustomTilt>
           {/* Second Row */}
-          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+          <CustomTilt perspective={500} scale={1.2} className="hover:z-10 relative">
             <div className="bg-gray-50 flex flex-col justify-center items-center py-20 h-40 client-animate-item shadow-xl rounded-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -288,8 +288,8 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
                 />
               </svg>
             </div>
-          </Tilt>
-          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+          </CustomTilt>
+          <CustomTilt perspective={500} scale={1.2} className="hover:z-10 relative">
             <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
               <Image
                 src="/images/clientLogo/fourthPartyLogo.png"
@@ -298,8 +298,8 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
                 alt="FourthParty Logo"
               />
             </div>
-          </Tilt>
-          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+          </CustomTilt>
+          <CustomTilt perspective={500} scale={1.2} className="hover:z-10 relative">
             <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
               <Image
                 src="/images/clientLogo/diligiteLogo.png"
@@ -308,8 +308,8 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
                 alt="Diligite logo"
               />
             </div>
-          </Tilt>
-          <Tilt perspective={500} scale={1.2} className="hover:z-10 relative">
+          </CustomTilt>
+          <CustomTilt perspective={500} scale={1.2} className="hover:z-10 relative">
             <div className="bg-gray-50 flex flex-col justify-center items-center h-40 client-animate-item shadow-xl rounded-lg">
               <Image
                 src="/images/clientLogo/logosmallblack.png"
@@ -318,7 +318,7 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
                 alt="Diligite logo"
               />
             </div>
-          </Tilt>
+          </CustomTilt>
         </div>
         <div className="flex-auto">
           <h3 className="text-4xl font-bold p-8 py-0 client-animate-item">
