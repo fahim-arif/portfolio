@@ -5,7 +5,7 @@ import Link from "next/link";
 const Thumbnail = ({ project }: { project: Project }) => {
   return (
     <>
-      <div className=" bg-white rounded-xl relative grow-on-hover">
+      <div className=" bg-white rounded-xl relative">
         <Link href={`/project/${project.id}`}>
           <div className="flex justify-center items-center">
             <Image

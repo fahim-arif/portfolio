@@ -300,8 +300,8 @@ export default function HeroSection({
           ></div>
         </>
       )}
-      <section className="bg-background relative overflow-x-clip h-[calc(950px-60px)] xl:h-[calc(100vh-60px)] max-h-[900px] w-full flex justify-center items-center">
-        <div className="xl:w-4/5 w-full flex justify-evenly items-center h-full z-[2] flex-col xl:flex-row">
+      <section className="bg-background relative overflow-x-clip h-[calc(850px-60px)] xl:h-[calc(100vh-60px)] py-10 max-h-[900px] w-full flex justify-center items-center overflow-hidden">
+        <div className="xl:w-4/5 w-full flex justify-between items-center h-full z-[2] flex-col xl:flex-row">
           <div className="text-box md:w-[700px] w-full h-[400px]  text-animation px-9">
             <div className="flex flex-col items-start">
               <div className="block md:flex">

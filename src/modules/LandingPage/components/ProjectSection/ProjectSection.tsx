@@ -5,7 +5,7 @@ import { projects } from "./projectsData";
 import NavigationTab from "./component/NavigationTab";
 import { Category } from "@/common/types";
 import gsap from "gsap";
-import Tilt from "react-parallax-tilt";
+import CustomTilt from "../../../../common/elements/CustomTilt";
 
 interface IProps {
   title: string;
@@ -118,7 +118,7 @@ const ProjectSection = React.forwardRef((props: IProps, ref: any) => {
           ref={parent}
         >
           {selectedProjects.map((project) => (
-            <Tilt
+            <CustomTilt
               key={project.id}
               perspective={500}
               scale={1.05}
@@ -127,7 +127,7 @@ const ProjectSection = React.forwardRef((props: IProps, ref: any) => {
               <div className="project-animate-item shadow-xl rounded-lg">
                 <Thumbnail project={project} />
               </div>
-            </Tilt>
+            </CustomTilt>
           ))}
         </div>
       </div>

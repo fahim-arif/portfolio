@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ContactUsModal } from "../Modals/ContactUsModal";
 import { useRouter } from "next/router";
 import gsap from "gsap";
@@ -102,6 +102,30 @@ export default function Navbar() {
     setDropdownCloseTimeoutId(timeoutId);
   };
 
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
+
+  const dropdownRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    if (isDropdownOpen) {
+      const dropdown = dropdownRef.current;
+      const links = dropdown?.children || [];
+      gsap.from(links, {
+        scale: 0,
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.2,
+      });
+      gsap.fromTo(
+        dropdown,
+        { scaleY: 0, transformOrigin: "top" },
+        { scaleY: 1, transformOrigin: "top", duration: 0.3 }
+      );
+    }
+  }, [isDropdownOpen]);
+
   return (
     <nav className="dark:bg-gray-900 mx-auto w-full">
       {isModalVisible && <ContactUsModal onCloseModal={onCloseModal} />}
@@ -163,8 +187,9 @@ export default function Navbar() {
             </li>
             <li
               className="relative group cursor-pointer"
-              onMouseEnter={openDropdown}
-              onMouseLeave={closeDropdownWithDelay}
+              onMouseEnter={mobileMenuOpen ? undefined : openDropdown}
+              onMouseLeave={mobileMenuOpen ? undefined : closeDropdownWithDelay}
+              onClick={mobileMenuOpen ? toggleDropdown : undefined}
             >
               <span className="block py-2 pl-3 pr-4 text-black rounded md:bg-transparent md:p-0 md:hover:text-primary text-heading3-bold md:text-base-semibold inline-flex items-center">
                 Projects
@@ -181,12 +206,17 @@ export default function Navbar() {
               </span>
               {isDropdownOpen && (
                 <ul
-                  className="absolute p-3 left-1/2 -translate-x-[5rem] shadow-2xl mt-2 rounded-md bg-gray-50"
-                  onMouseEnter={openDropdown}
-                  onMouseLeave={closeDropdownWithDelay}
+                  ref={dropdownRef}
+                  className={`${
+                    !mobileMenuOpen && "absolute left-1/2 -translate-x-[5rem]"
+                  } p-3 shadow-2xl mt-2 rounded-md bg-gray-50`}
                 >
                   {projects.map((project) => (
-                    <Link key={project.id} href={`/project/${project.id}`}>
+                    <Link
+                      key={project.id}
+                      href={`/project/${project.id}`}
+                      onClick={() => toggleMobileMenu()}
+                    >
                       <li className="w-[21rem] px-2 py-2 rounded-lg overflow-hidden md:hover:text-primary">
                         {project.name}
                       </li>
