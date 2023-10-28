@@ -301,7 +301,7 @@ export default function HeroSection({
         </>
       )}
       <section className="bg-background relative overflow-x-clip h-[calc(1120px-60px)] xl:h-[calc(100vh-60px)] py-10 max-h-[900px] w-full flex justify-center items-center overflow-hidden">
-        <div className="w-full max-w-6xl flex justify-between items-center h-full z-[2] flex-col xl:flex-row bg-green-300">
+        <div className="w-full max-w-6xl flex justify-between items-center h-full z-[2] flex-col xl:flex-row">
           <div className="text-box md:w-[700px] w-full h-[400px]  text-animation px-9">
             <div className="flex flex-col items-start">
               <div className="block md:flex">
