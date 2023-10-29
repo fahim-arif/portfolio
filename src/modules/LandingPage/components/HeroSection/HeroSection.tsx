@@ -196,7 +196,7 @@ export default function HeroSection({
 
   return (
     <>
-      <Particles
+      {/* <Particles
         className="h-[140vh] xl:h-screen absolute top-0 left-0 w-full z-[1]"
         id="tsparticles"
         init={particlesInit}
@@ -273,7 +273,7 @@ export default function HeroSection({
           },
           detectRetina: true,
         }}
-      />
+      /> */}
       {!vanishName && (
         <div className="font-bold text-[10vw] bg-[#1D1E24] absolute left-0 top-0 h-screen z-[100] w-full justify-center flex items-center letter-container">
           {Array.from("NOVAWORK").map((char, index) => (
