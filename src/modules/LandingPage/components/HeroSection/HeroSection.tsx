@@ -196,7 +196,7 @@ export default function HeroSection({
 
   return (
     <>
-      <Particles
+      {/* <Particles
         className="h-[140vh] xl:h-screen absolute top-0 left-0 w-full z-[1]"
         id="tsparticles"
         init={particlesInit}
@@ -273,7 +273,7 @@ export default function HeroSection({
           },
           detectRetina: true,
         }}
-      />
+      /> */}
       {!vanishName && (
         <div className="font-bold text-[10vw] bg-[#1D1E24] absolute left-0 top-0 h-screen z-[100] w-full justify-center flex items-center letter-container">
           {Array.from("NOVAWORK").map((char, index) => (
@@ -300,8 +300,8 @@ export default function HeroSection({
           ></div>
         </>
       )}
-      <section className="bg-background relative overflow-x-clip h-[calc(850px-60px)] xl:h-[calc(100vh-60px)] py-10 max-h-[900px] w-full flex justify-center items-center overflow-hidden">
-        <div className="xl:w-4/5 w-full flex justify-between items-center h-full z-[2] flex-col xl:flex-row">
+      <section className="bg-background relative overflow-x-clip h-[calc(1120px-60px)] xl:h-[calc(100vh-60px)] py-10 max-h-[900px] w-full flex justify-center items-center overflow-hidden">
+        <div className="w-full max-w-6xl flex justify-between items-center h-full z-[2] flex-col xl:flex-row">
           <div className="text-box md:w-[700px] w-full h-[400px]  text-animation px-9">
             <div className="flex flex-col items-start">
               <div className="block md:flex">
