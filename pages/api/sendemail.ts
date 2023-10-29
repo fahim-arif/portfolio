@@ -39,9 +39,8 @@ export default async function handler(
       to: "info@novawork.io",
       replyTo: data.email,
       subject: "A client wants to contact with us",
-      text: `First Name: ${data.firstName}\nLast Name: ${
-        data.lastName
-      }\nEmail: ${data.email} ${
+      text: `Name: ${data.firstName} ${data.lastName}\n
+      Email: ${data.email} ${
         data?.company ? `\nCompany: ` + data.company : ""
       } ${data?.phone ? `\nPhone: ` + data.phone : ""} \n\n${
         data.selectedProjects.length > 0 ? "Project Type: " : ""

@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import { useState } from "react";
 import validator from "validator";
@@ -86,22 +85,9 @@ const ContactSection = () => {
   return (
     <div className="pt-8 mx-4 sm:mx-8 md:mx-12 lg:mx-20 xl:mx-32 pb-10">
       <div className="border-2 border-gray-100 rounded mt-12 max-w-lg mx-auto px-4 sm:px-12 pb-20 pt-10">
-        {/* <p className="uppercase font-bold sm:text-3xl text-center mt-5 text-2xl">
-          Contact US
-        </p> */}
         <h2 className="mt-3 text-3xl text-gray-900 font-light pb-5">
           Have questions? Give us a shout.
         </h2>
-
-        {/* <div className="flex flex-col items-center my-8">
-          <Image
-            src="/images/email.png"
-            alt="Email"
-            width={24}
-            height={24}
-          ></Image>
-          <a href="mailto: info@novawork.io">info@novawork.io</a>
-        </div> */}
 
         <form onSubmit={handleSubmit}>
           {/* First Name */}
@@ -197,20 +183,6 @@ const ContactSection = () => {
               Submit
             </button>
           )}
-
-          {/* <div className="flex justify-left items-end mt-8">
-            <Image
-              src="/images/map-location.png"
-              alt="Map"
-              width={24}
-              height={24}
-            ></Image>
-            <p className="bold ml-2">Location</p>
-          </div>
-          <p className="text-gray-500 text-xs w-1/2 mt-2">
-            6TH FLOOR, SHEIKH KAMAL IT BUSINESS INCUBATOR, CUET, RAOZAN,
-            CHITTAGONG-4349
-          </p> */}
         </form>
       </div>
     </div>
