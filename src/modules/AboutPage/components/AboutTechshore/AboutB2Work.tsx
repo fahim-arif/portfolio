@@ -291,7 +291,7 @@ const AboutB2Work = ({ title, description }: IProps) => {
           <h1 className="text-heading3-bold  mt-10 mb-5 zoom-in-element-culture">
             Culture
           </h1>
-          <p className="zoom-in-element-culture">
+          <div className="zoom-in-element-culture">
             At Novawork, our culture is much more than just a set of values on
             paper; it's the heartbeat that drives every decision, project, and
             interaction.
@@ -321,7 +321,7 @@ const AboutB2Work = ({ title, description }: IProps) => {
             dreamers, united by a shared vision. At Novawork, every individual
             is valued, every idea is cherished, and every day is a new
             opportunity to make a difference.
-          </p>
+          </div>
         </section>
       </div>
       <section

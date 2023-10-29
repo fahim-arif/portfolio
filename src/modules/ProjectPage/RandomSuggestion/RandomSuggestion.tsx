@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import Tilt from "react-parallax-tilt";
+import CustomTilt from "../../../common/elements/CustomTilt";
 
 const RandomSuggestion = ({ projects }: { projects: Projects }) => {
   const { id } = useRouter().query;
@@ -62,7 +62,7 @@ const RandomSuggestion = ({ projects }: { projects: Projects }) => {
     <div ref={sectionRef} className="my-16 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {projects.map((project) => (
-          <Tilt
+          <CustomTilt
             key={project.id}
             perspective={500}
             scale={1.15}
@@ -83,7 +83,7 @@ const RandomSuggestion = ({ projects }: { projects: Projects }) => {
                 </button>
               </div>
             </Link>
-          </Tilt>
+          </CustomTilt>
         ))}
       </div>
     </div>

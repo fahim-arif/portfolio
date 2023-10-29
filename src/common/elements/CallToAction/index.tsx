@@ -3,7 +3,7 @@ import { ContactUsModal } from "../Modals/ContactUsModal";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
-import Tilt from "react-parallax-tilt";
+import CustomTilt from "../CustomTilt";
 import gsap from "gsap";
 
 interface IProps {
@@ -116,7 +116,7 @@ const CallToAction = ({
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2 grid-cols-1 px-8 md:px-0">
             {!isExistingProject && (
               <Link href="/existing-project">
-                <Tilt
+                <CustomTilt
                   perspective={500}
                   scale={1.05}
                   className="p-8 bg-gray-50 cta-animate-item hover:z-10 relative h-full shadow-2xl"
@@ -134,12 +134,12 @@ const CallToAction = ({
                       </button>
                     </div>
                   </div>
-                </Tilt>
+                </CustomTilt>
               </Link>
             )}
             {!isNewConcept && (
               <Link href="/new-concept">
-                <Tilt
+                <CustomTilt
                   perspective={500}
                   scale={1.05}
                   className="p-8 bg-gray-50 cta-animate-item hover:z-10 relative h-full shadow-2xl"
@@ -157,12 +157,12 @@ const CallToAction = ({
                       </button>
                     </div>
                   </div>
-                </Tilt>
+                </CustomTilt>
               </Link>
             )}
             {!isAugmentTeam && (
               <Link href="/augment-team">
-                <Tilt
+                <CustomTilt
                   perspective={500}
                   scale={1.05}
                   className="bg-gray-50 p-8 cta-animate-item hover:z-10 relative h-full shadow-2xl"
@@ -180,12 +180,12 @@ const CallToAction = ({
                       </button>
                     </div>
                   </div>
-                </Tilt>
+                </CustomTilt>
               </Link>
             )}
             {!isEnterprise && (
               <Link href="/enterprise">
-                <Tilt
+                <CustomTilt
                   perspective={500}
                   scale={1.05}
                   className="bg-background p-8 cta-animate-item hover:z-10 relative h-full shadow-2xl"
@@ -203,12 +203,12 @@ const CallToAction = ({
                       </button>
                     </div>
                   </div>
-                </Tilt>
+                </CustomTilt>
               </Link>
             )}
             {!isAdvanced && (
               <Link href="/advanced-tech">
-                <Tilt
+                <CustomTilt
                   perspective={500}
                   scale={1.05}
                   className="p-8 bg-gradient-primary-secondary cta-animate-item hover:z-10 relative h-full shadow-2xl"
@@ -226,7 +226,7 @@ const CallToAction = ({
                       </button>
                     </div>
                   </div>
-                </Tilt>
+                </CustomTilt>
               </Link>
             )}
           </div>
