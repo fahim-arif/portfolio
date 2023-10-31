@@ -60,11 +60,11 @@ const ThankYouSection = () => {
     <div ref={thankYouRef} className=" flex flex-col items-center w-full">
       <div
         style={{
-          backgroundImage: "url('/images/hero.png')",
+          backgroundImage: "url('/images/hero.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="h-[24rem] w-full flex justify-center items-center flex-col slide-in-left-thank"
+        className="h-[20rem] w-full flex justify-center items-center flex-col slide-in-left-thank"
       >
         <h1 className="text-white text-[2.5rem] font-bold w-full md:w-[50rem] text-center zoom-in-element-thank">
           Thank You!
@@ -75,7 +75,7 @@ const ThankYouSection = () => {
         </p>
       </div>
 
-      <div className="bg-white p-6 mx-auto w-full max-w-2xl rounded-lg shadow-md zoom-in-element-thank">
+      <div className="bg-white mt-8  p-6 mx-auto w-full max-w-2xl zoom-in-element-thank">
         <p className="text-[1.2rem] font-medium mb-4">
           Your <span className="font-bold">Enterprise Software</span> request
           has been received loud and clear. Our team is already rolling up their
@@ -83,15 +83,12 @@ const ThankYouSection = () => {
           within a week to discuss your requirements.
         </p>
         <p className="text-[1.2rem] font-medium">
-          While you wait, why not explore more about our services?{" "}
-          <a href="#" className="text-blue-600 hover:underline">
-            Learn More
-          </a>
-          . Or follow us on social media.
+          While you wait, why not explore more about our services? Learn More .
+          Or follow us on social media.
         </p>
       </div>
 
-      <div className=" text-black flex justify-center my-7 w-full md:w-[50rem] px-10 md:px-0 zoom-in-element-thank">
+      <div className=" text-black flex justify-center mt-[3rem] w-full md:w-[50rem] px-10 md:px-0 zoom-in-element-thank">
         <div className="flex w-full sm:w-2/3 md:w-1/3  justify-between">
           <Link
             href="https://web.facebook.com/novaworkio"

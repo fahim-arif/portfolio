@@ -59,10 +59,8 @@ const QuoteSection = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    setIsLoading(true);
-
     if (validateForm()) {
-      // Call api endpoint here:
+      setIsLoading(true);
       try {
         const response = await fetch("/api/send-quote", {
           method: "POST",
@@ -206,12 +204,12 @@ const QuoteSection = () => {
         <div className=" flex flex-col items-center w-full" ref={quoteRef}>
           <div
             style={{
-              backgroundImage: "url('/images/hero.png')",
+              backgroundImage: "url('/images/hero.jpg')",
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
             }}
-            className=" h-[24rem] w-full flex justify-center items-center flex-col slide-in-left-quote"
+            className=" h-[20rem] w-full flex justify-center items-center flex-col slide-in-left-quote"
           >
             <h1 className="text-white text-[2rem] md:text-[2.5rem] font-bold w-full md:w-[50rem] px-5 md:px-0 text-center zoom-in-element-quote">
               Elevate Your Business with Next-Level Software Solutions
@@ -235,9 +233,9 @@ const QuoteSection = () => {
                 phenomenon. Let's team up, ride the waves of triumphs and
                 challenges, and craft something extraordinary together.
               </p>
-              <div className="flex h-[13.5rem] mt-[5rem] zoom-in-element-quote">
+              <div className="flex items-center h-[14rem] mt-[5rem] zoom-in-element-quote ">
                 <div className="bg-primary h-full w-[1.5rem]"></div>
-                <div className="p-8 h-full ">
+                <div className="p-8 h-full flex flex-col justify-center">
                   <p className="text-xl font-semibold mb-4 ">
                     "I've always dreamed about running a company that has no
                     full-time IT employees, and with my apps developed by
@@ -262,14 +260,17 @@ const QuoteSection = () => {
               <p>Fields with * are required.</p>
               <form className="mt-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 lg:grid-cols-2">
-                  <div className="my-2 max-w-xs lg:mr-2">
+                  <div className="mt-2 mb-6 max-w-xs lg:mr-5">
+                    <label className="font-semibold">
+                      Name<span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="text"
                       value={formData.name}
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
-                      className="p-2 w-full mb-2 border rounded"
+                      className="p-2 w-full mt-2 mb-2 border border-gray-400 rounded "
                       placeholder="Name"
                     />
                     {errors.name && (
@@ -277,39 +278,44 @@ const QuoteSection = () => {
                     )}
                   </div>
 
-                  <div className="my-2 max-w-xs lg:mr-2">
+                  <div className="mt-2 mb-6 max-w-xs">
+                    <label className="font-semibold">
+                      Email <span className="text-red-500">*</span>
+                    </label>
                     <input
                       type="email"
                       value={formData.email}
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="p-2 w-full mb-2 border rounded"
+                      className="p-2 w-full mt-2 mb-2 border border-gray-400 rounded"
                       placeholder="Email"
                     />
                     {errors.email && (
                       <p className="text-red-500">{errors.email}</p>
                     )}
                   </div>
-                  <div className="my-2 max-w-xs lg:ml-2">
+                  <div className=" max-w-xs lg:mr-5">
+                    <label className="font-semibold">Phone</label>
                     <input
                       type="tel"
                       value={formData.phone}
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
                       }
-                      className="p-2 w-full mb-2 border rounded"
+                      className="p-2 w-full mt-2 mb-2 border border-gray-400 rounded"
                       placeholder="Phone"
                     />
                   </div>
-                  <div className="my-2 max-w-xs lg:mr-2">
+                  <div className=" max-w-xs ">
+                    <label className="font-semibold">Company</label>
                     <input
                       type="text"
                       value={formData.company}
                       onChange={(e) =>
                         setFormData({ ...formData, company: e.target.value })
                       }
-                      className="p-2 w-full mb-2 border rounded"
+                      className="p-2 w-full mt-2 mb-2 border border-gray-400 rounded"
                       placeholder="Company"
                     />
                   </div>
@@ -356,12 +362,12 @@ const QuoteSection = () => {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="p-2 w-full mb-2 border rounded max-w-xl"
+                  className="p-2 w-full mb-2 border border-gray-400 rounded max-w-xl "
                   placeholder="Your message"
                   rows={4}
                 />
                 <div>
-                  <button className="text-black bg-primary rounded-lg text-base-bold tracking-wider border-2 border-primary p-4 px-8 my-4 grow-on-hover">
+                  <button className="text-white bg-primary  rounded-lg text-base-bold tracking-wider border-2 border-primary p-4 px-8 my-4 grow-on-hover">
                     {t("form.btnText")}
                   </button>
                 </div>
