@@ -69,7 +69,9 @@ const ClientSection = ({
       className="px-4 md:px-12 max-w-7xl mx-auto max-h-fit py-8 my-20"
     >
       {showHeading && (
-        <h1 className="text-[2.5rem] font-bold text-center">Trusted by</h1>
+        <h1 className="text-[2.5rem] font-bold text-center client-animate-item">
+          Trusted by
+        </h1>
       )}
       {isModalVisible && <ContactUsModal onCloseModal={onCloseModal} />}
       <div className="flex h-full flex-col md:flex-row">
