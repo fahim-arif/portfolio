@@ -64,7 +64,7 @@ const ThankYouSection = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className=" h-[24rem] w-full flex justify-center items-center flex-col slide-in-left-thank"
+        className="h-[24rem] w-full flex justify-center items-center flex-col slide-in-left-thank"
       >
         <h1 className="text-white text-[2.5rem] font-bold w-full md:w-[50rem] text-center zoom-in-element-thank">
           Thank You!

@@ -249,20 +249,8 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="#"
-                onClick={() => {
-                  showModal();
-                  return toggleMobileMenu();
-                }}
-                className="block py-2 pl-3 pr-4 text-black rounded md:bg-transparent md:p-0 md:hover:text-primary text-heading3-bold md:text-base-semibold"
-              >
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/quote"
-                className={`bg-primary py-2 pl-3 pr-4 whitespace-nowrap rounded-lg text-heading3-bold md:text-base-semibold`}
+                className={`bg-primary text-white rounded-full py-4 px-4 whitespace-nowrap text-heading3-bold md:text-base-semibold`}
                 onClick={() =>
                   router.pathname === "/quote" && toggleMobileMenu()
                 }
