@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import gsap from "gsap";
+import { useRouter } from "next/router";
 
 const PROJECT_TYPES = [
   "Mobile App",
@@ -14,6 +15,7 @@ const PROJECT_TYPES = [
 ];
 
 const QuoteSection = () => {
+  const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
   const t = useTranslations("contactForm");
@@ -27,8 +29,7 @@ const QuoteSection = () => {
   });
 
   const [errors, setErrors] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
   });
 
@@ -37,14 +38,13 @@ const QuoteSection = () => {
   const validateForm = () => {
     let isValid = true;
     let newErrors = {
-      firstName: "",
-      lastName: "",
+      name: "",
       email: "",
     };
 
     if (!formData.name) {
       isValid = false;
-      newErrors.firstName = "First Name is required";
+      newErrors.name = "Name is required";
     }
 
     if (!formData.email) {
@@ -64,7 +64,7 @@ const QuoteSection = () => {
     if (validateForm()) {
       // Call api endpoint here:
       try {
-        const response = await fetch("/api/sendemail", {
+        const response = await fetch("/api/send-quote", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -92,6 +92,8 @@ const QuoteSection = () => {
               theme: "dark",
             }
           );
+
+          router.push("/thank-you");
         } else {
           toast.error(
             "Something went wrong. Please try again later or email us directly at info@novawork.io",
@@ -169,23 +171,23 @@ const QuoteSection = () => {
     <div className=" flex flex-col items-center">
       <div
         style={{
-          backgroundImage: "url('/images/1.jpg')",
+          backgroundImage: "url('/images/hero.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
         className=" h-[20rem] w-full flex justify-center items-center flex-col"
       >
-        <h1 className="text-white text-[2.5rem] font-bold w-[50rem] text-center">
+        <h1 className="text-white text-[2rem] md:text-[2.5rem] font-bold w-full md:w-[50rem] px-5 md:px-0 text-center">
           Elevate Your Business with Next-Level Software Solutions
         </h1>
-        <p className="text-white text-[1.2rem] font-semibold w-[50rem] text-center">
+        <p className="text-white text-[1.2rem] font-semibold md:w-[50rem] px-5 md:px-0 w-full text-center mt-5">
           Unlock the potential of your business with our cutting-edge software
           development services. Tailored solutions for unparalleled efficiency
           and growth.
         </p>
       </div>
-      <div className="flex mt-10">
-        <div className="text-justify w-[30rem] p-8">
+      <div className="flex mt-10 flex-col xl:flex-row">
+        <div className="text-justify w-full md:w-[50rem] xl:w-[30rem] p-8 ">
           <p>
             Every decision matters, every investment is a thoughtful step. With
             Novawork, every penny, every drop of effort you invest transforms
@@ -217,7 +219,7 @@ const QuoteSection = () => {
           </div>
         </div>
 
-        <div className="p-8 h-fit w-[40rem]">
+        <div className="p-8 h-fit w-full md:w-[40rem]">
           <h4 className="text-heading4-semibold text-black font-bold">
             Get Your Free Quote
           </h4>
@@ -234,9 +236,7 @@ const QuoteSection = () => {
                   className="p-2 w-full mb-2 border rounded"
                   placeholder="Name"
                 />
-                {errors.firstName && (
-                  <p className="text-red-500">{errors.firstName}</p>
-                )}
+                {errors.name && <p className="text-red-500">{errors.name}</p>}
               </div>
 
               <div className="my-2 max-w-xs lg:mr-2">

@@ -259,6 +259,17 @@ export default function Navbar() {
                 Contact
               </Link>
             </li>
+            <li>
+              <Link
+                href="/quote"
+                className={`bg-primary py-2 pl-3 pr-4 whitespace-nowrap rounded-lg text-heading3-bold md:text-base-semibold`}
+                onClick={() =>
+                  router.pathname === "/quote" && toggleMobileMenu()
+                }
+              >
+                Get a Free Quote
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
