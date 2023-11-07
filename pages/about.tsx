@@ -11,7 +11,7 @@ function AboutPage() {
   return (
     <>
       <Head>
-        <title>About</title>
+        <title>About Novawork</title>
       </Head>
       <Navbar />
       <AboutNovawork title={t("heading")} description={t("description")} />

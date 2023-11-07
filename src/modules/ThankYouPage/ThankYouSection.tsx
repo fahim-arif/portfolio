@@ -63,6 +63,7 @@ const ThankYouSection = () => {
           backgroundImage: "url('/images/hero.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          minHeight: "30vh",
         }}
         className="h-[20rem] w-full flex justify-center items-center flex-col slide-in-left-thank"
       >

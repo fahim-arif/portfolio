@@ -10,7 +10,7 @@ const Quote = () => {
   return (
     <>
       <Head>
-        <title>Quote</title>
+        <title>Get a free Quote</title>
       </Head>
       <Navbar />
       <QuoteSection />

@@ -208,13 +208,14 @@ const QuoteSection = () => {
               backgroundSize: "cover",
               backgroundPosition: "center",
               backgroundRepeat: "no-repeat",
+              minHeight: "30vh",
             }}
             className=" h-[20rem] w-full flex justify-center items-center flex-col slide-in-left-quote"
           >
-            <h1 className="text-white text-[2rem] md:text-[2.5rem] font-bold w-full md:w-[50rem] px-5 md:px-0 text-center zoom-in-element-quote">
+            <h1 className="text-white text-[1.75rem] md:text-[2.5rem] font-bold w-full md:w-[50rem] px-5 md:px-0 text-center zoom-in-element-quote">
               Elevate Your Business with Next-Level Software Solutions
             </h1>
-            <p className="text-white text-[1.2rem] font-semibold md:w-[50rem] px-5 md:px-0 w-full text-center mt-5 zoom-in-element-quote">
+            <p className="text-white text-[1.2rem] font-semibold md:w-[50rem] px-5 md:px-0 w-full text-center mt-12 md:mt-5 zoom-in-element-quote">
               Unlock the potential of your business with our cutting-edge
               software development services. Tailored solutions for unparalleled
               efficiency and growth.
@@ -233,7 +234,7 @@ const QuoteSection = () => {
                 phenomenon. Let's team up, ride the waves of triumphs and
                 challenges, and craft something extraordinary together.
               </p>
-              <div className="flex items-center h-[14rem] mt-[5rem] zoom-in-element-quote ">
+              <div className="flex items-center h-[14rem] mt-[5rem] zoom-in-element-quote">
                 <div className="bg-primary h-full w-[1.5rem]"></div>
                 <div className="p-8 h-full flex flex-col justify-center">
                   <p className="text-xl font-semibold mb-4 ">
