@@ -4,12 +4,18 @@ import { ContactUsModal } from "@/common/elements/Modals/ContactUsModal";
 import gsap from "gsap";
 import CustomTilt from "../../../../common/elements/CustomTilt";
 interface IProps {
-  title: string;
-  description: string;
-  btnText: string;
+  title?: string;
+  description?: string;
+  btnText?: string;
+  showHeading?: boolean;
 }
 
-const ClientSection = ({ title, description, btnText }: IProps) => {
+const ClientSection = ({
+  title,
+  description,
+  btnText,
+  showHeading,
+}: IProps) => {
   const [isModalVisible, setModalVisible] = useState(false);
 
   const showModal = () => {
@@ -62,6 +68,11 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
       ref={sectionRef}
       className="px-4 md:px-12 max-w-7xl mx-auto max-h-fit py-8 my-20"
     >
+      {showHeading && (
+        <h1 className="text-[2.5rem] font-bold text-center client-animate-item">
+          Trusted by
+        </h1>
+      )}
       {isModalVisible && <ContactUsModal onCloseModal={onCloseModal} />}
       <div className="flex h-full flex-col md:flex-row">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 min-h-max mt-8 md:mt-0">
@@ -352,20 +363,22 @@ const ClientSection = ({ title, description, btnText }: IProps) => {
             </div>
           </CustomTilt>
         </div>
-        <div className="flex-auto  mt-8 md:mt-0">
-          <h3 className="text-4xl font-bold p-8 py-0 client-animate-item">
-            {title}
-          </h3>
-          <p className="p-8 text-gray-500 font-semibold text-lg pb-0 client-animate-item">
-            {description}
-          </p>
-          <button
-            onClick={showModal}
-            className="ml-8 p-4 mt-8 text-gray-700 text-base-bold tracking-wider border-2 border-primary p-1 grow-on-hover font-semibold client-animate-item"
-          >
-            {btnText}
-          </button>
-        </div>
+        {title && description && btnText && (
+          <div className="flex-auto  mt-8 md:mt-0">
+            <h3 className="text-4xl font-bold p-8 py-0 client-animate-item">
+              {title}
+            </h3>
+            <p className="p-8 text-gray-500 font-semibold text-lg pb-0 client-animate-item">
+              {description}
+            </p>
+            <button
+              onClick={showModal}
+              className="ml-8 p-4 mt-8 text-gray-700 text-base-bold tracking-wider border-2 border-primary p-1 grow-on-hover font-semibold client-animate-item"
+            >
+              {btnText}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
