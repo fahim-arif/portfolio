@@ -34,8 +34,8 @@ const ProjectPage = () => {
   return (
     <>
       <HtmlHead
-        title={`${project?.title} - Novawork Software Development`}
-        content="Las Vegas, Nevada, based, onshore, Custom Web & App Development company fully remote offering website consultation and software development projects."
+        title={`${project?.title} - Software Development`}
+        content="Custom Web & App Development company fully remote offering website consultation and software development projects."
       />
       {project ? (
         <>

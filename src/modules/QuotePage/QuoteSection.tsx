@@ -78,7 +78,7 @@ const QuoteSection = () => {
           console.log("Email sent successfully!");
 
           toast.success(
-            "Your email has been received! Thank you for being with Novawork. We will contact you as soon as poosible.",
+            "Your email has been received! Thank you for being with me. I will contact you as soon as poosible.",
             {
               position: "top-center",
               autoClose: 5000,
@@ -94,7 +94,7 @@ const QuoteSection = () => {
           router.push("/thank-you");
         } else {
           toast.error(
-            "Something went wrong. Please try again later or email us directly at info@novawork.io",
+            "Something went wrong. Please try again later or email us directly at fahim.cuet77@gmail.com",
             {
               position: "top-center",
               autoClose: 5000,
@@ -111,7 +111,7 @@ const QuoteSection = () => {
       } catch (error) {
         console.log("An error occurred:", error);
         toast.error(
-          "Something went wrong. Please try again later or email us directly at info@novawork.io",
+          "Something went wrong. Please try again later or email us directly at fahim.cuet77@gmail.com",
           {
             position: "top-center",
             autoClose: 5000,
@@ -225,7 +225,7 @@ const QuoteSection = () => {
             <div className="text-justify w-full md:w-[50rem] xl:w-[30rem] p-8 zoom-in-element-quote">
               <p>
                 Every decision matters, every investment is a thoughtful step.
-                With Novawork, every penny, every drop of effort you invest
+                With Fahim, every penny, every drop of effort you invest
                 transforms into a cascade of value, growth, and triumph.
               </p>
               <p className="mt-8 ">
@@ -240,7 +240,7 @@ const QuoteSection = () => {
                   <p className="text-xl font-semibold mb-4 ">
                     "I've always dreamed about running a company that has no
                     full-time IT employees, and with my apps developed by
-                    Novawork, we are able to achieve just that."
+                    Fahim, we are able to achieve just that."
                   </p>
                   <div className="flex items-center">
                     <div className="flex-grow">

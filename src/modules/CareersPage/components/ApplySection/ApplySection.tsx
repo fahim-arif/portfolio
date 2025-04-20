@@ -61,8 +61,8 @@ const ApplySection = () => {
 
         if (base64String.length > 0) {
           const msg = {
-            to: "info@novawork.io", // Change to your recipient
-            from: "info@novawork.io", // Change to your verified sender
+            to: "fahim.cuet77@gmail.com", // Change to your recipient
+            from: "fahim.cuet77@gmail.com", // Change to your verified sender
             subject: `Applying for the position ${user.position}`,
             html: `Hi, I'm <strong>${user.fullName}</strong>, I would like to join on position ${user.position}, My email address is <a href="mailto:${user.email}">${user.email}</a>`,
             attachments: [

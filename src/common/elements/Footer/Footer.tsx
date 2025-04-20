@@ -33,10 +33,10 @@ export default function Footer() {
           <ul className="w-full flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 flex-1 ">
             <li className="mb-6">
               <span className="text-white mr-4  text-lg lg:text-heading3-bold font-semibold md:mr-6">
-                Las Vegas, NV
+                Fahim Arif
               </span>
             </li>
-            <li className=" text-white"> Las Vegas, Nevada, 89183</li>
+            <li className=" text-white"> Open to Joining your awesome team</li>
           </ul>
           <ul className="w-full flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 flex-1">
             <li className="mb-6">
@@ -67,14 +67,9 @@ export default function Footer() {
           </ul>
           <ul className="w-full flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 flex-1">
             <li className="mb-6">
-              <span className="text-white mr-4 text-lg md:mr-6">Company</span>
+              <span className="text-white mr-4 text-lg md:mr-6">Usuful Links</span>
             </li>
             <li className="">
-              <Link href="/about">
-                <span className="text-white mr-4 md:mr-6 text-sm ">
-                  About Us
-                </span>
-              </Link>
             </li>
             <li className="mt-4">
               <Link href="/services">
@@ -103,17 +98,17 @@ export default function Footer() {
                 onClick={showModal}
                 className="p-4 text-white tracking-wider border-2 border-primary p-1 grow-on-hover  text-small-medium  md:font-semibold"
               >
-                {isGerman ? "Kontaktiere uns" : "Contact Us"}
+                {isGerman ? "Kontaktiere uns" : "Contact Me"}
               </button>
             </li>
             <li className="my-4">
-              <Link className="text-white" href="mailto: info@novawork.io">
-                info@novawork.io
+              <Link className="text-white" href="mailto: fahim.cuet77@gmail.com">
+                fahim.cuet77@gmail.com
               </Link>
             </li>
             <li className="my-4">
               <Link className="text-white" href="tel:+610-656-3531">
-                Phone: +610-656-3531
+                Phone: +880-17399-20604
               </Link>
             </li>
           </ul>
@@ -123,35 +118,28 @@ export default function Footer() {
         <div className=" text-white w-full flex justify-center my-7">
           <div className="flex w-full sm:w-2/3 md:w-1/3  justify-between">
             <Link
-              href="https://web.facebook.com/novaworkio"
+              href="#"
               className="mr-4 hover:text-gray-500"
               target="_blank"
             >
               <FaFacebook size={24} />
             </Link>
             <Link
-              href="https://twitter.com/Novawork1o"
+              href="#"
               className="mr-4 hover:text-gray-500"
               target="_blank"
             >
               <FaTwitter size={24} />
             </Link>
             <Link
-              href="https://www.linkedin.com/company/novawork-io/"
+              href="https://www.linkedin.com/in/fahim-arif/"
               className="mr-4 hover:text-gray-500"
               target="_blank"
             >
               <FaLinkedin size={24} />
             </Link>
             <Link
-              href="https://www.instagram.com/novawork.io/"
-              className="hover:text-gray-500"
-              target="_blank"
-            >
-              <FaInstagram size={24} />
-            </Link>
-            <Link
-              href="mailto:info@novawork.io"
+              href="mailto:fahim.cuet77@gmail.com"
               className="hover:text-gray-500"
               target="_blank"
             >
@@ -160,7 +148,7 @@ export default function Footer() {
           </div>
         </div>
         <span className="block text-sm text-gray-300 sm:text-center">
-          © 2023 <a>Novawork</a>. All Rights Reserved.
+          © 2025 <a>Fahim Arif</a>. All Rights Reserved.
         </span>
       </div>
     </footer>

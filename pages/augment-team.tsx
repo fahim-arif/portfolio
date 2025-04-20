@@ -30,7 +30,7 @@ const reviewImage = {
 
 const client = {
   review:
-    "When our company needed additional development help we were able to seamlessly integrate with help from Novawork. Communication has been clear, expectations have been set and met, and the overall quality of work.",
+    "When our company needed additional development help we were able to seamlessly integrate with help from Fahim. Communication has been clear, expectations have been set and met, and the overall quality of work.",
   name: "Karim Varela",
   designation: "VP Engineering, MetaLink",
 };
@@ -39,17 +39,17 @@ const faqs = [
   {
     question: "What kinds of development resources are available?",
     answer:
-      "While our team is proficient in all of the most popular coding languages. Availability of our resources are based on tech stack and timeline. Our recommended ramp-up time is 3-4 weeks to get onboarded and start writing code for a project. Faster onboarding is addressed on a case-by-case basis.",
+      "While I'm proficient in all of the most popular coding languages. Availability of my resources are based on tech stack and timeline. My recommended ramp-up time is 3-4 weeks to get onboarded and start writing code for a project. Faster onboarding is addressed on a case-by-case basis.",
   },
   {
     question: "Do you offer contract-to-hire?",
     answer:
-      "Novawork does not offer a contract-to-hire model for our staffing engagements. With our team, you can enjoy the stability and consistency of a full-time employee with the flexibility of part-time resources.",
+      "You can enjoy the stability and consistency of a full-time employee with the flexibility of part-time resources.",
   },
   {
-    question: "Can resources be on-site or at our office?",
+    question: "Can resources be on-site?",
     answer:
-      "Currently, we do not offer on-site services, as we are dedicated to providing top-notch remote solutions that ensure efficiency and quality regardless of location. However, we understand the value of face-to-face collaboration and are actively exploring the possibility of offering on-site services in the future. In the meantime, our team is committed to understanding your needs and finding innovative ways to work closely with you, utilizing the latest communication and collaboration tools to make the experience seamless and productive. Let’s have a conversation about your unique needs and how we can best serve you, regardless of geographical boundaries.",
+      "I'm dedicated to providing top-notch remote solutions that ensure efficiency and quality regardless of location. ",
   },
 ];
 
@@ -81,8 +81,8 @@ function AugmentTeamPage() {
   return (
     <>
       <HtmlHead
-        title="Augment Your Team - Novawork Software Development"
-        content="Our diverse, local team of software developers and designers is available for part time or short term contracts to augment your team."
+        title="Augment Your Team - Software Development"
+        content="I'm available for part time or short term contracts to augment your team."
       />
       <Navbar />
       <HeroSection

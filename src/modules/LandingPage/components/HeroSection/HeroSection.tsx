@@ -196,87 +196,9 @@ export default function HeroSection({
 
   return (
     <>
-      {/* <Particles
-        className="h-[140vh] xl:h-screen absolute top-0 left-0 w-full z-[1]"
-        id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={{
-          background: {
-            color: {
-              value: "transparent",
-            },
-          },
-          fullScreen: {
-            enable: false,
-          },
-          fpsLimit: 120,
-          interactivity: {
-            events: {
-              onClick: {
-                enable: false,
-                mode: "push",
-              },
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
-              resize: true,
-            },
-            modes: {
-              push: {
-                quantity: 5,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
-            },
-          },
-          particles: {
-            color: {
-              value: "#00FFFF",
-            },
-            links: {
-              color: "#00FFFF",
-              distance: 150,
-              enable: true,
-              opacity: 0.5,
-              width: 1,
-            },
-            move: {
-              direction: "none",
-              enable: true,
-              outModes: {
-                default: "bounce",
-              },
-              random: false,
-              speed: 6,
-              straight: false,
-            },
-            number: {
-              density: {
-                enable: true,
-                area: 1000,
-              },
-              value: 20,
-            },
-            opacity: {
-              value: 0.5,
-            },
-            shape: {
-              type: "circle",
-            },
-            size: {
-              value: { min: 1, max: 5 },
-            },
-          },
-          detectRetina: true,
-        }}
-      /> */}
       {!vanishName && (
         <div className="font-bold text-[10vw] bg-[#1D1E24] absolute left-0 top-0 h-screen z-[100] w-full justify-center flex items-center letter-container">
-          {Array.from("NOVAWORK").map((char, index) => (
+          {Array.from(`Hi_ I am _  Fahim!`).map((char, index) => (
             <span
               key={index}
               className={`letter-animation ${

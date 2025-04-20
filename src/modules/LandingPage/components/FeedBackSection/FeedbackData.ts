@@ -4,7 +4,7 @@ export const FeedbackData = [
     src: "/images/R1.jpg",
     alt: "r1",
     review:
-      "I am very satisfied with Novawork team and their work. Hopefully we will work again soon!",
+      "I am very satisfied with Fahim and his work. Hopefully we will work again soon!",
     name: "John Travis",
     designation: "CTO",
   },
@@ -13,7 +13,7 @@ export const FeedbackData = [
     src: "/images/R2.png",
     alt: "r2",
     review:
-      "Trusted Novawork with our workflow management platform - they did not disappoint.",
+      "Trusted Fahim with our workflow management platform - he did not disappoint.",
     name: "Chris Morris",
     designation: "CEO",
   },

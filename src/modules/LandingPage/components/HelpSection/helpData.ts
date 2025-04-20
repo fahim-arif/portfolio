@@ -9,14 +9,14 @@ export const helpData = [
   {
     title: "Existing Projects",
     description:
-      "Software platforms that need new features, updating, or maintenance. Work with our developers to meet your product goals.",
+      "Software platforms that need new features, updating, or maintenance. Work with me to meet your product goals.",
     actionText: "Learn More",
     type: dataType.DEFAULT,
   },
   {
     title: "New Concepts",
     description:
-      "Software projects that haven't been built. Work with our design and architecture team to bring your concept to life.",
+      "Software projects that haven't been built. Work with me to design and architecture team to bring your concept to life.",
     actionText: "Learn More",
     type: dataType.DEFAULT,
   },
@@ -28,9 +28,9 @@ export const helpData = [
     type: dataType.DEFAULT,
   },
   {
-    title: "Novawork for Enterprise",
+    title: "For Enterprise",
     description:
-      "Get to know how Novawork can accommodate the unique needs of your large organization.",
+      "Get to know how I can accommodate the unique needs of your large organization.",
     actionText: "Learn More",
     type: dataType.DARK,
   },

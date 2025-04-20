@@ -56,8 +56,8 @@ function HomePage() {
   return (
     <>
       <HtmlHead
-        title="Novawork Software Development - Las Vegas, Nevada"
-        content="Novawork is an agile team of developers passionate about delivering quality software beyond expectations. Let's build applications together."
+        title="Software Development"
+        content="I'm passionate about delivering quality software beyond expectations. Let's build applications together."
       />
       <Suspense fallback={<SkeletonCard />}>
         <Navbar />

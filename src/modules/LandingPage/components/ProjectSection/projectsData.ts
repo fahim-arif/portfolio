@@ -5,8 +5,8 @@ export const projects = [
     subtitle:
       "A community platform for retailers and brands to sell collaboratively",
     description:
-      "Novawork played a pivotal role in assisting Twomatches, a community platform designed for retailers and brands to collaborate on sales. We were instrumental in both the creation and deployment of their site on AWS. Our expertise ensured a seamless transition to the cloud, allowing Twomatches to benefit from increased scalability, security, and performance. With our support, Twomatches was empowered to provide an optimal online experience for its users.",
-    techicalOverview: `Novawork played an instrumental role in deploying Twomatches, a community platform for retailers and brands, onto the robust Amazon Web Services (AWS) cloud platform. The architectural foundation of Twomatches was crafted with a frontend built on ReactJS/Redux, ensuring a responsive user interface. The backend was anchored by the powerful combination of Node.js and Express.js, creating a scalable server environment primed for growth. Data integrity and structured storage were paramount, which led to the decision to integrate Amazon RDS with PostgreSQL.
+      "Fahim played a pivotal role in assisting Twomatches, a community platform designed for retailers and brands to collaborate on sales. We were instrumental in both the creation and deployment of their site on AWS. Expertise ensured a seamless transition to the cloud, allowing Twomatches to benefit from increased scalability, security, and performance. With our support, Twomatches was empowered to provide an optimal online experience for its users.",
+    techicalOverview: `Fahim played an instrumental role in deploying Twomatches, a community platform for retailers and brands, onto the robust Amazon Web Services (AWS) cloud platform. The architectural foundation of Twomatches was crafted with a frontend built on ReactJS/Redux, ensuring a responsive user interface. The backend was anchored by the powerful combination of Node.js and Express.js, creating a scalable server environment primed for growth. Data integrity and structured storage were paramount, which led to the decision to integrate Amazon RDS with PostgreSQL.
 
     The beauty of deploying on AWS is the inherent scalability and flexibility it offers. Twomatches was hosted on Amazon EC2 instances, which allowed the platform to scale vertically based on the influx of traffic and user demand. Furthermore, static assets—ranging from images to documents—found a home in Amazon S3, renowned for its reliability. AWS's Auto Scaling capabilities were also harnessed to ensure that the platform could adapt to varying traffic loads without manual intervention.
     
@@ -16,12 +16,12 @@ export const projects = [
     
     Lastly, the vitality of monitoring and logging wasn't overlooked. Amazon CloudWatch was integrated to keep a vigilant eye on the application's overall health and performance. And for those unforeseen instances where in-depth debugging was required, AWS X-Ray was at the ready to trace and resolve issues.`,
     takeaway:
-      "Novawork's exemplary technical prowess was essential in the evolution and deployment of Twomatches on AWS, a pioneering community platform for retailers and brands. Many fledgling platforms often grapple with the intricate facets of cloud deployment and ensuring a seamless user experience. This is where Novawork shone, offering not only the technical know-how but also the strategic foresight for scalable architecture. Twomatches, through its collaboration with Novawork, not only addressed its immediate digital needs but also secured a robust foundation for anticipated business expansion. As Twomatches forges ahead in its domain, it does so with the confidence that Novawork's expertise has equipped it with a resilient and adaptive platform.",
+      "Fahim's exemplary technical prowess was essential in the evolution and deployment of Twomatches on AWS, a pioneering community platform for retailers and brands. Many fledgling platforms often grapple with the intricate facets of cloud deployment and ensuring a seamless user experience. This is where Fahim shone, offering not only the technical know-how but also the strategic foresight for scalable architecture. Twomatches, through its collaboration with Fahim, not only addressed its immediate digital needs but also secured a robust foundation for anticipated business expansion. As Twomatches forges ahead in its domain, it does so with the confidence that Fahim expertise has equipped it with a resilient and adaptive platform.",
     client: {
       name: "Amos Omokpo",
       designation: "Staff Engineer, IBM",
       review:
-        "Collaborating with Novawork has been a game-changer for Twomatches. In an era where digital presence can make or break a brand, Novawork proved to be the reliable partner we were seeking.",
+        "Collaborating with Fahim has been a game-changer for Twomatches. In an era where digital presence can make or break a brand, Fahim proved to be the reliable partner we were seeking.",
     },
     category: "Web Development",
     thumbnail: "/images/thumbnail.jpg",
@@ -63,10 +63,10 @@ export const projects = [
     description:
       "FreeCast, Inc. is an American digital media distribution company based in Orlando, Florida. The company is the developer of Rabbit TV, a web-based video aggregator and subscription service that provides access to third-party content. FreeCast's SmartGuide technology is the basis of SelectTV, a streaming media aggregation service that combines all your streaming apps into one user-friendly interface.",
     techicalOverview:
-      "Novawork partner with FreeCast to build their web platform using ReactJS, Typescript, Redux, Python, Fast API, AWS, and many more. We also provide ongoing support and maintenance for their platform. ",
+      "Fahim helped to build web platform using ReactJS, Typescript, Redux, Python, Fast API, AWS, and many more. We also provide ongoing support and maintenance for their platform. ",
     // Write takeaway here
     takeaway:
-      "For over 2 years Novawork has been working with FreeCast to build their web platform and have combined seamlessly to produce a high volume of websites and digital solutions for customers nationwide. Novawork has been a reliable partner for FreeCast and has helped them to achieve their business goals. ",
+      "For over 2 years Fahim has been working with FreeCast to build their web platform and have combined seamlessly to produce a high volume of websites and digital solutions for customers nationwide. Fahim has been a reliable developer for FreeCast and has helped them to achieve their business goals. ",
 
     client: {
       name: "",
@@ -98,15 +98,15 @@ export const projects = [
     subtitle:
       "A platform that connects freelancers with clients in a seamless manner",
     description:
-      "Novawork partner with Shoutt to build their web platform using ReactJS, Typescript, Redux, Python, Fast API, AWS, and many more. We also provide ongoing support and maintenance for their platform. ",
-    techicalOverview: `Novawork partner with Shoutt to build their web platform using .NET Core, C#, ReactJS, Typescript, Azure and many more. Like many digital freelancing platform, their strength lies in their marketing expertise, creativity, and ability to create and build brands. To match their marketing skill, they need an equally strong technical team that can help them continue to innovate and bring a variety of digital solutions to the table.`,
+      "Fahim helped Shoutt to build their web platform using ReactJS, Typescript, Redux, Python, Fast API, AWS, and many more. We also provide ongoing support and maintenance for their platform. ",
+    techicalOverview: `Fahim helped Shoutt to build their web platform using .NET Core, C#, ReactJS, Typescript, Azure and many more. Like many digital freelancing platform, their strength lies in their marketing expertise, creativity, and ability to create and build brands. To match their marketing skill, they need an equally strong technical team that can help them continue to innovate and bring a variety of digital solutions to the table.`,
     takeaway:
-      "From DevOps, hosting solutions, UX design and development, Novawork matches the resources to the needs presenting and even offering weekend and evening support for critical initiatives. By having a dedicated yet flexible team of 4-6 Novawork resources available each month MKJ can meet surges and demand but also scale back appropriately to match their customers' needs.  ",
+      "From DevOps, hosting solutions, UX design and development, Fahim matches the resources to the needs presenting and even offering weekend and evening support for critical initiatives.  ",
     client: {
       name: "Saleem Khan",
       designation: "Shoutt, CEO",
       review:
-        "Novawork has been a great partner for us. They are reliable, responsive, and deliver high-quality work.",
+        "Fahim has been a great developer for us. They are reliable, responsive, and deliver high-quality work.",
     },
     category: "Web Development",
     thumbnail: "/images/shoutt-04.png",
@@ -241,7 +241,7 @@ export const projects = [
     title: "Real Estate Data Scraper",
     subtitle: "Revolutionizing Real Estate Data Collection",
     description:
-      "Harness the power of web scraping with Novawork's state-of-the-art tool designed specifically for comprehensive real estate data collection. Our tool navigates the vast digital landscape, extracting valuable property data from multiple websites to equip you with actionable insights in one consolidated dashboard.",
+      "Harness the power of web scraping with state-of-the-art tool designed specifically for comprehensive real estate data collection. Our tool navigates the vast digital landscape, extracting valuable property data from multiple websites to equip you with actionable insights in one consolidated dashboard.",
     techicalOverview: `Scraping Engine: Leveraging advanced algorithms that swiftly navigate through diverse real estate sites, ensuring comprehensive data extraction.
 
     Data Consolidation: Collected data is refined and unified, eliminating redundancies and inconsistencies.
@@ -254,12 +254,12 @@ export const projects = [
     
     Secure Operation: Data privacy is paramount. Our tool operates under stringent security measures, ensuring that the data collected remains confidential and is used ethically.`,
     takeaway:
-      "Gain a competitive edge in the real estate market with in-depth, accurate, and up-to-date property data. Novawork's Real Estate Data Scraper allows you to stay informed, make data-driven decisions, and maximize your real estate investments.",
+      "Gain a competitive edge in the real estate market with in-depth, accurate, and up-to-date property data. Real Estate Data Scraper allows you to stay informed, make data-driven decisions, and maximize your real estate investments.",
     client: {
       name: "",
       designation: "",
       review:
-        "I've been in the real estate business for over a decade, and Novawork's tool has been a game-changer. The wealth of information it provides, combined with its ease of use, has given us a significant advantage in the market.",
+        "I've been in the real estate business for over a decade, and tool has been a game-changer. The wealth of information it provides, combined with its ease of use, has given us a significant advantage in the market.",
     },
     category: "Automation",
     thumbnail: "/images/scraping-1.jpg",

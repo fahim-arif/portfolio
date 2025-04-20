@@ -39,7 +39,7 @@ const faqs = [
   {
     question: "What AI/Machine Learning services does your company offer?",
     answer:
-      "Our company offers a wide range of AI/ML services, including custom model development, natural language processing, predictive analytics, image and video analysis, and deep learning solutions, tailored to meet the unique needs of your business.",
+      "I offers a wide range of AI/ML services, including custom model development, natural language processing, predictive analytics, image and video analysis, and deep learning solutions, tailored to meet the unique needs of your business.",
   },
   {
     question:
@@ -83,7 +83,7 @@ function AdvancedTechPage() {
   return (
     <>
       <HtmlHead
-        title="Advanced Technology - Novawork Software Development"
+        title="Advanced Technology - Software Development"
         content="Our team has proven experience in machine learning development, computer vision, IoT, and advanced hardware integrations."
       />
       <Navbar />

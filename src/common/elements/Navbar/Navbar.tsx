@@ -133,10 +133,11 @@ export default function Navbar() {
         <div className="flex items-center max-h-16 flex-1 z-10">
           <Link href="/">
             <Image
-              width={200}
-              height={112}
-              src="/images/logo1.png"
-              alt="Novawork Logo"
+              width={50}
+              height={100}
+              src="/images/1745106456527.jpeg"
+              alt="Logo"
+              style={{ borderRadius: "50%" }}
             />
           </Link>
         </div>
@@ -234,17 +235,6 @@ export default function Navbar() {
                 }
               >
                 Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className={`block py-2 pl-3 pr-4 text-black rounded md:bg-transparent md:p-0 md:hover:text-primary text-heading3-bold md:text-base-semibold`}
-                onClick={() =>
-                  router.pathname === "/about" && toggleMobileMenu()
-                }
-              >
-                About
               </Link>
             </li>
             <li>

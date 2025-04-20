@@ -31,7 +31,7 @@ const reviewImage = {
 
 const client = {
   review:
-    "I've always dreamed about running a company that has no full-time IT employees, and with my apps developed by Novawork, we are able to achieve just that.",
+    "I've always dreamed about running a company that has no full-time IT employees, and with my apps developed by Fahim, we are able to achieve just that.",
   name: "Greg Maxwell",
   designation: "Owner, Advancing Practitioners",
 };
@@ -52,7 +52,7 @@ const faqs = [
     question:
       "I am a technical product decision-maker and I know exactly what I need. Will you follow the requirements I send you?",
     answer:
-      "Yes. We will work with you to build a scope and are happy to take a project off of your plate. If you are seeking more hands-on collaboration, perhaps you should look at our part-time engineer offerings to add a Novawork team member to your team for the duration of your project.",
+      "Yes. We will work with you to build a scope and are happy to take a project off of your plate. If you are seeking more hands-on collaboration, perhaps you should look at our part-time engineer offerings to add team member to your team for the duration of your project.",
   },
 ];
 
@@ -86,7 +86,7 @@ function ExsitingPage() {
   return (
     <>
       <HtmlHead
-        title="Existing Projects - Novawork Software Development"
+        title="Existing Projects - Software Development"
         content="Whether you need to add features, refresh design, or improve performance, we have you covered. Have a conversation with our architects today."
       />
       <Navbar />

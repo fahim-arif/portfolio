@@ -54,9 +54,9 @@ const ContactSection = () => {
   // Send Email via Sendgrid/mail
   const sendEmail = async () => {
     const msg = {
-      to: "info@novawork.io", // Change to your recipient
-      from: "info@novawork.io", // Change to your verified sender
-      subject: `Contact US Form Response`,
+      to: "fahim.cuet77@gmail.com", // Change to your recipient
+      from: "fahim.cuet77@gmail.com", // Change to your verified sender
+      subject: `Contact me Form Response`,
       html: `Hi, I'm <strong>${
         user.firstName + " " + user.lastName
       }</strong>, <br> Email: <a href="mailto:${user.email}">${

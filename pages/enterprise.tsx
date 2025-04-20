@@ -76,7 +76,7 @@ function EnterprisePage() {
   return (
     <>
       <HtmlHead
-        title="Enterprise Applications - Novawork Software Development"
+        title="Enterprise Applications - Software Development"
         content="Leverage our subject matter knowledge in healthcare, finance, manufacturing, and education to build or upgrade enterprise-grade applications"
       />
       <Navbar />

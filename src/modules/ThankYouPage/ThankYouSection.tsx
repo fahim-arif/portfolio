@@ -71,20 +71,20 @@ const ThankYouSection = () => {
           Thank You!
         </h1>
         <p className="text-white text-[1.2rem] font-semibold w-full md:w-[50rem] px-5 md:px-0 mt-5 text-center zoom-in-element-thank">
-          We Appreciate Your Trust in Us. Your Journey with Novawork Has Just
-          Begun! Someone from our team will be reaching out to you soon.
+          We Appreciate Your Trust in me. Your Journey with me Has Just Begun! I
+          will be reaching out to you soon.
         </p>
       </div>
 
       <div className="bg-white mt-8  p-6 mx-auto w-full max-w-2xl zoom-in-element-thank">
         <p className="text-[1.2rem] font-medium mb-4">
           Your <span className="font-bold">Enterprise Software</span> request
-          has been received loud and clear. Our team is already rolling up their
-          sleeves to ensure we exceed your expectations. Expect a reply from us
-          within a week to discuss your requirements.
+          has been received loud and clear. I am already rolling up my sleeves
+          to ensure we exceed your expectations. Expect a reply from me within
+          hours to discuss your requirements.
         </p>
         <p className="text-[1.2rem] font-medium">
-          While you wait, why not explore more about our services? Learn More .
+          While you wait, why not explore more about my services? Learn More .
           Or follow us on social media.
         </p>
       </div>
@@ -92,35 +92,14 @@ const ThankYouSection = () => {
       <div className=" text-black flex justify-center mt-[3rem] w-full md:w-[50rem] px-10 md:px-0 zoom-in-element-thank">
         <div className="flex w-full sm:w-2/3 md:w-1/3  justify-between">
           <Link
-            href="https://web.facebook.com/novaworkio"
-            className="mr-4 hover:text-gray-500"
-            target="_blank"
-          >
-            <FaFacebook size={24} />
-          </Link>
-          <Link
-            href="https://twitter.com/Novawork1o"
-            className="mr-4 hover:text-gray-500"
-            target="_blank"
-          >
-            <FaTwitter size={24} />
-          </Link>
-          <Link
-            href="https://www.linkedin.com/company/novawork-io/"
+            href="https://www.linkedin.com/in/fahim-arif/"
             className="mr-4 hover:text-gray-500"
             target="_blank"
           >
             <FaLinkedin size={24} />
           </Link>
           <Link
-            href="https://www.instagram.com/novawork.io/"
-            className="hover:text-gray-500"
-            target="_blank"
-          >
-            <FaInstagram size={24} />
-          </Link>
-          <Link
-            href="mailto:info@novawork.io"
+            href="mailto:fahim.cuet77@gmail.com"
             className="hover:text-gray-500"
             target="_blank"
           >

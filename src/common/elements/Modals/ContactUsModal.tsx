@@ -91,7 +91,7 @@ export const ContactUsModal = ({ onCloseModal }: IProps) => {
           console.log("Email sent successfully!");
 
           toast.success(
-            "Your email has been received! Thank you for being with Novawork. We will contact you as soon as poosible.",
+            "Your email has been received! Thank you for being with me. We will contact you as soon as poosible.",
             {
               position: "top-center",
               autoClose: 5000,
@@ -105,7 +105,7 @@ export const ContactUsModal = ({ onCloseModal }: IProps) => {
           );
         } else {
           toast.error(
-            "Something went wrong. Please try again later or email us directly at info@novawork.io",
+            "Something went wrong. Please try again later or email us directly at fahim.cuet77@gmail.com",
             {
               position: "top-center",
               autoClose: 5000,
@@ -122,7 +122,7 @@ export const ContactUsModal = ({ onCloseModal }: IProps) => {
       } catch (error) {
         console.log("An error occurred:", error);
         toast.error(
-          "Something went wrong. Please try again later or email us directly at info@novawork.io",
+          "Something went wrong. Please try again later or email us directly at fahim.cuet77@gmail.com",
           {
             position: "top-center",
             autoClose: 5000,
@@ -201,17 +201,20 @@ export const ContactUsModal = ({ onCloseModal }: IProps) => {
             <p className="text-subtle-large text-gray-300">
               {t("description")}
             </p>
-            <p className="text-small-medium text-gray-600 my-4">OUR OFFICE</p>
+            <p className="text-small-medium text-gray-600 my-4">Location</p>
             <h3 className="text-heading3-bold font-semibold text-white mb-4">
-              Las Vegas, Nevada
+              Everywhere
             </h3>
-            <p className="text-white my-4"> Las Vegas, Nevada</p>
+            <p className="text-white my-4"> Remote Worldwide</p>
             <div className="flex pb-4">
-              <Link className="text-white" href="mailto: info@novawork.io">
-                info@novawork.io {" // "}
+              <Link
+                className="text-white"
+                href="mailto: fahim.cuet77@gmail.com"
+              >
+                fahim.cuet77@gmail.com {" // "}
               </Link>
-              <Link className="text-white" href="tel:+610-656-3531">
-                +610-656-3531
+              <Link className="text-white" href="tel:+880-17399-20604">
+                +880-17399-20604
               </Link>
             </div>
           </div>

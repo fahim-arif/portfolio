@@ -31,7 +31,7 @@ const reviewImage = {
 
 const client = {
   review:
-    "We started working with Novawork over a year ago, and since our very first conversation, we have felt complete comfort in working with them. Because of their transparency, quality of work, advice, consultation, and overall company culture, I see a very long and successful partnership with Novawork.",
+    "We started working with Fahim over a year ago, and since our very first conversation, we have felt complete comfort in working with them. Because of their transparency, quality of work, advice, consultation, and overall company culture, I see a very long and successful project with Fahim.",
   name: "Georgette Taylor",
   designation: "Co-Founder, Hexa Health",
 };
@@ -52,7 +52,7 @@ const faqs = [
     question:
       "I am a technical product decision-maker and I know exactly what I need. Will you follow the requirements I send you?",
     answer:
-      "Yes. We will work with you to build a scope and are happy to take a project off of your plate. If you are seeking more hands-on collaboration, perhaps you should look at our part-time engineers offering to add a Novawork team member to your team for the duration of your project.",
+      "Yes. We will work with you to build a scope and are happy to take a project off of your plate",
   },
 ];
 
@@ -104,7 +104,7 @@ function NewConceptPage() {
   return (
     <>
       <HtmlHead
-        title="New App Concepts - Novawork Software Development"
+        title="New App Concepts Software Development"
         content="Our team of experts will help you choose a technology strategy that connects your budget and timeline to your new app concept."
       />
       <Navbar />
