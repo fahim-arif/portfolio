@@ -1,24 +1,36 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = () => {
-  if (!process.env.NEXT_PUBLIC_SENGRID_API_KEY) {
-    console.error(
-      "Error: Missing NEXT_PUBLIC_SENGRID_API_KEY environment variable"
-    );
-    process.exit(1);
-  }
 
-  return {
-    reactStrictMode: true,
-    swcMinify: true,
-    experimental: {
-      appDir: false,
-    },
-    i18n: {
-      locales: ["de", "en"],
-      defaultLocale: "en",
-      localeDetection: false,
-    },
-  };
+// Pages from the old agency template. Their URLs now point to the home page.
+const retiredPages = [
+  "/services",
+  "/quote",
+  "/existing-project",
+  "/new-concept",
+  "/augment-team",
+  "/enterprise",
+  "/advanced-tech",
+  "/careers",
+  "/contact",
+  "/thank-you",
+];
+
+const nextConfig = {
+  reactStrictMode: true,
+  swcMinify: true,
+  async redirects() {
+    return [
+      ...retiredPages.map((source) => ({
+        source,
+        destination: "/",
+        permanent: true,
+      })),
+      // Old numeric project pages (agency-era projects were removed).
+      { source: "/project/:id(\\d+)", destination: "/#projects", permanent: true },
+      // The German locale was removed.
+      { source: "/de", destination: "/", permanent: true },
+      { source: "/de/:path*", destination: "/", permanent: true },
+    ];
+  },
 };
 
 module.exports = nextConfig;

@@ -1,155 +1,109 @@
 import Link from "next/link";
-import React, { useState } from "react";
-import { ContactUsModal } from "../Modals/ContactUsModal";
-import { useRouter } from "next/router";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaLinkedin,
-  FaInstagram,
-  FaEnvelope,
-} from "react-icons/fa";
+import React from "react";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
+import { CONTACT } from "@/common/constants/contact";
+import { PROFILE } from "@/content/profile";
+
+const columnClass =
+  "w-full flex-wrap items-center mb-6 text-sm font-medium sm:mb-0 flex-1";
+const linkClass =
+  "text-white text-sm hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary";
 
 export default function Footer() {
-  const [isModalVisible, setModalVisible] = useState(false);
-
-  const router = useRouter();
-
-  const isGerman = router.locale === "de";
-
-  const showModal = () => {
-    setModalVisible(true);
-  };
-
-  const onCloseModal = () => {
-    setModalVisible(false);
-  };
+  const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-background ">
-      {isModalVisible && <ContactUsModal onCloseModal={onCloseModal} />}
-      <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8 pt-8 p-8 lg:p-12 ">
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-4 ">
-          <ul className="w-full flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 flex-1 ">
+    <footer className="bg-background">
+      <div className="w-full max-w-screen-xl mx-auto p-8 lg:p-12">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+          <ul className={columnClass}>
             <li className="mb-6">
-              <span className="text-white mr-4  text-lg lg:text-heading3-bold font-semibold md:mr-6">
-                Fahim Arif
+              <span className="text-white text-lg lg:text-heading3-bold font-semibold">
+                {PROFILE.name}
               </span>
             </li>
-            <li className=" text-white"> Open to Joining your awesome team</li>
-          </ul>
-          <ul className="w-full flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 flex-1">
-            <li className="mb-6">
-              <span className="text-white mr-4 md:mr-6 mb-6 text-lg">
-                Community
-              </span>
-            </li>
-
-            <li className="">
-              <Link href="/?scroll=projects">
-                <span className="text-white mr-4 md:mr-6 text-sm ">
-                  Projects
-                </span>
-              </Link>
-            </li>
-            <li className="mt-4">
-              <Link href="/?scroll=reviews">
-                <span className="text-white mr-4 md:mr-6 text-sm ">
-                  Reviews
-                </span>
-              </Link>
-            </li>
-            <li className="mt-4">
-              <Link href="/new-concept?scroll=faq">
-                <span className="text-white mr-4 md:mr-6 text-sm ">FAQ</span>
-              </Link>
+            <li className="text-white">{PROFILE.title}</li>
+            <li className="text-gray-300 mt-2">
+              {PROFILE.location} · {PROFILE.availability}
             </li>
           </ul>
-          <ul className="w-full flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 flex-1">
+          <ul className={columnClass}>
             <li className="mb-6">
-              <span className="text-white mr-4 text-lg md:mr-6">Usuful Links</span>
+              <span className="text-white text-lg">On this site</span>
             </li>
-            <li className="">
-            </li>
-            <li className="mt-4">
-              <Link href="/services">
-                <span className="text-white mr-4 md:mr-6 text-sm ">
-                  Services
-                </span>
-              </Link>
-            </li>
-            <li className="mt-4">
-              <span
-                onClick={showModal}
-                className="text-white mr-4 md:mr-6 text-sm cursor-pointer"
-              >
-                Contact
-              </span>
-            </li>
+            {[
+              ["/#about", "About"],
+              ["/#projects", "Projects"],
+              ["/#experience", "Experience"],
+              ["/#contact", "Contact"],
+            ].map(([href, label], i) => (
+              <li key={href} className={i ? "mt-4" : ""}>
+                <Link href={href} className={linkClass}>
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
-          <ul className="w-full flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400 flex-1">
+          <ul className={columnClass}>
             <li className="mb-6">
-              <span className="text-white mr-4 text-lg  md:mr-6 ">
-                {isGerman ? "Noch Fragen?" : "Have a Question?"}
-              </span>
+              <span className="text-white text-lg">Get in touch</span>
             </li>
             <li>
-              <button
-                onClick={showModal}
-                className="p-4 text-white tracking-wider border-2 border-primary p-1 grow-on-hover  text-small-medium  md:font-semibold"
-              >
-                {isGerman ? "Kontaktiere uns" : "Contact Me"}
-              </button>
+              <a className={linkClass} href={CONTACT.mailto}>
+                {CONTACT.email}
+              </a>
             </li>
-            <li className="my-4">
-              <Link className="text-white" href="mailto: fahim.cuet77@gmail.com">
-                fahim.cuet77@gmail.com
-              </Link>
+            <li className="mt-4">
+              <a className={linkClass} href={CONTACT.linkedin} target="_blank" rel="noopener noreferrer">
+                LinkedIn
+              </a>
             </li>
-            <li className="my-4">
-              <Link className="text-white" href="tel:+610-656-3531">
-                Phone: +880-17399-20604
-              </Link>
+            <li className="mt-4">
+              <a className={linkClass} href={CONTACT.github} target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </li>
+            <li className="mt-4">
+              <a className={linkClass} href={CONTACT.resume} download>
+                Resume (PDF)
+              </a>
             </li>
           </ul>
         </div>
 
-        <hr className=" border-gray-200 sm:mx-auto dark:border-gray-700 " />
-        <div className=" text-white w-full flex justify-center my-7">
-          <div className="flex w-full sm:w-2/3 md:w-1/3  justify-between">
-            <Link
-              href="#"
-              className="mr-4 hover:text-gray-500"
+        <hr className="border-gray-700 sm:mx-auto mt-8" />
+        <div className="text-white w-full flex justify-center my-7">
+          <div className="flex gap-10">
+            <a
+              href={CONTACT.linkedin}
+              className="hover:text-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
             >
-              <FaFacebook size={24} />
-            </Link>
-            <Link
-              href="#"
-              className="mr-4 hover:text-gray-500"
+              <FaLinkedin size={24} aria-hidden="true" />
+            </a>
+            <a
+              href={CONTACT.github}
+              className="hover:text-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub profile"
             >
-              <FaTwitter size={24} />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/fahim-arif/"
-              className="mr-4 hover:text-gray-500"
-              target="_blank"
+              <FaGithub size={24} aria-hidden="true" />
+            </a>
+            <a
+              href={CONTACT.mailto}
+              className="hover:text-gray-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              aria-label={`Email ${CONTACT.email}`}
             >
-              <FaLinkedin size={24} />
-            </Link>
-            <Link
-              href="mailto:fahim.cuet77@gmail.com"
-              className="hover:text-gray-500"
-              target="_blank"
-            >
-              <FaEnvelope size={24} />
-            </Link>
+              <FaEnvelope size={24} aria-hidden="true" />
+            </a>
           </div>
         </div>
-        <span className="block text-sm text-gray-300 sm:text-center">
-          © 2025 <a>Fahim Arif</a>. All Rights Reserved.
-        </span>
+        <p className="block text-sm text-gray-300 sm:text-center">
+          © <span suppressHydrationWarning>{year}</span> {PROFILE.name}
+        </p>
       </div>
     </footer>
   );
